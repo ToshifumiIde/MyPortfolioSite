@@ -1,0 +1,28 @@
+.toTop {
+  .toTopArrow {
+    &:hover {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    background-color: #fff;
+    border: 0.1rem solid $navy;
+    border-radius: 50%;
+    color: $navy;
+    height: 5.6rem;
+    left: 90%;
+    opacity: 0.9;
+    position: fixed;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+    width: 5.6rem;
+    @include pc {
+      display: none;
+    }
+    .fa-chevron-up {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

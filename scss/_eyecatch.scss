@@ -1,0 +1,184 @@
+#Eyecatch {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  min-height: 80rem;
+
+  .eyecatchWrap {
+    height: 100%;
+    #sliderWrap {
+      height: 100%;
+      position: relative;
+      width: 100%;
+
+      #slider {
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 40% 50%;
+        height: 100%;
+        width: 100%;
+        @include pc {
+          background-position: 50% 50%;
+        }
+      }
+      .slider1 {
+        background-image: url(../img/slider1_colorado.jpg);
+      }
+      .slider2 {
+        background-image: url(../img/slider2_sunset.jpg);
+        background-position: 30% 100%;
+      }
+      .slider3 {
+        background-image: url(../img/slider3_ocean.jpg);
+      }
+    }
+
+    .eyecatchShadow {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(20, 20, 20, 0.4);
+    }
+
+    .slogan {
+      border-right: 0.2rem solid rgba(255, 255, 255, 0.9);
+      color: #fff;
+      font-family: serif;
+      font-size: 3.5rem;
+      font-weight: normal;
+      left: 50%;
+      letter-spacing: 0.3rem;
+      line-height: 3rem;
+      position: absolute;
+      top: 30%;
+      transform: translate(-50%, -50%);
+      @include pc {
+        border-right: 0.5rem solid rgba(255, 255, 255, 0.9);
+        font-size: 6rem;
+        line-height: 6rem;
+        letter-spacing: 0.6rem;
+        top: 50%;
+      }
+    }
+
+    .animeTypewriter {
+      animation: typing 12s steps(17) 300ms infinite both,
+        blinkTextCursor 1000ms steps(17) infinite normal;
+      height: 3.5rem;
+      overflow: hidden;
+      width: 0;
+      white-space: nowrap;
+      @include pc {
+        animation: typingPc 12s steps(17) 300ms infinite both,
+          blinkTextCursor 1000ms steps(17) infinite normal;
+        height: 6rem;
+      }
+    }
+    @keyframes typing {
+      /*タイプライターライクなアニメーション*/
+      0% {
+        width: 0;
+      }
+      15% {
+        width: 10em;
+      }
+      75% {
+        width: 10em;
+      }
+      85% {
+        width: 0;
+      }
+    }
+    @keyframes typingPc {
+      /*タイプライターライクなアニメーション*/
+      0% {
+        width: 0;
+      }
+      15% {
+        width: 10.3em;
+      }
+      75% {
+        width: 10.3em;
+      }
+      85% {
+        width: 0;
+      }
+    }
+
+    @keyframes blinkTextCursor {
+      /*点滅するカーソルのアニメーション*/
+      from {
+        border-right-color: rgba(255, 255, 255, 0.9);
+      }
+      to {
+        border-right-color: transparent;
+      }
+    }
+
+    .myMessage {
+      color: #fff;
+      font-size: 1.3rem;
+      left: 50%;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      @include pc {
+        font-size: 2rem;
+        top: 65%;
+      }
+    }
+
+    .urgeScroll {
+      color: #fff;
+      left: 50%;
+      position: absolute;
+      text-align: center;
+      top: 70%;
+      transform: translate(-50%, -50%);
+      @include pc {
+        top: 92%;
+      }
+
+      //mouseIcon
+      .mouseIcon {
+        border: 0.2rem solid #fff;
+        border-radius: 2rem;
+        height: 5rem;
+        margin: 0 auto;
+        width: 2.3rem;
+
+        .wheel {
+          animation: roll 1.2s infinite;
+          background-color: #fff;
+          width: 0.2rem;
+          height: 35%;
+          margin: 0 auto;
+        }
+        @keyframes roll {
+          0% {
+            opacity: 1;
+            transform: translateY(10%);
+          }
+          100% {
+            opacity: 0.6;
+            transform: translateY(160%);
+          }
+        }
+      }
+      //mouseIcon
+
+      .scroll {
+        color:#fff;
+        display: inline-block;
+        font-family: serif;
+        padding-top: 1rem;
+        font-size: 1rem;
+        @include pc {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}

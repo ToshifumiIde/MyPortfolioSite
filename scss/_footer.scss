@@ -1,0 +1,67 @@
+footer {
+  background-color: $navy;
+  margin:0 auto;
+  height: 8rem;
+
+  @include pc {
+    height: 8rem;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 10px;
+    width: 80%;
+
+    @include pc {
+      max-width: 124rem;
+    }
+    a {
+      color: #ccc;
+      font-size: 1.5rem;
+      position: relative;
+      text-decoration: none;
+
+      @include tab {
+        font-size: 2rem;
+      }
+      @include pc {
+        font-size: 2rem;
+      }
+
+      &:hover {
+        color: #fff;
+      }
+
+      &::after {
+        background: #fff;
+        bottom: -0.1rem;
+        content: "";
+        height: 0.1rem;
+        left: 0;
+        position: absolute;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform 0.2s;
+        width: 100%;
+
+        @include tab {
+          height: 0.2rem;
+        }
+        @include pc {
+          height: 0.2rem;
+        }
+      }
+      &:hover::after {
+        transform: scale(1, 1);
+      }
+    }
+  }
+  .copyRight {
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 10px 0;
+    text-align: center;
+  }
+}

@@ -1,0 +1,190 @@
+#Contact {
+  background-color: rgb(250, 250, 250);
+  padding-top: 5.6rem;
+  height: 70rem;
+  @include pc {
+    padding-top: 6.4rem;
+    // height: 70rem;
+    height: 70rem;
+  }
+
+  .contactWrap {
+    @include pc {
+      max-width: 124rem;
+      margin: 0 auto;
+    }
+
+    .contactTitle {
+      color: $navy;
+      font-size: 1.3rem;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    .contactForm {
+      height: 15rem;
+      padding: 3rem;
+      text-align: center;
+      .mail-navy {
+        color: rgba($navy, 0.8);
+        &:hover {
+          color: #b9c3c9;
+          transition: 0.3s;
+        }
+      }
+    }
+    .contactDesc {
+      // padding-top: 2rem;
+      color: rgba($navy, 0.85);
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .contactSub {
+      // margin-top: 5rem;
+      // color: $navy;
+      font-size: 1.1rem;
+      padding-top: 0.5rem;
+      text-align: center;
+    }
+    .contactButton {
+      display: flex;
+      align-items: center;
+      height: 15rem;
+      padding: 3rem;
+    }
+    .googleForm {
+      background: linear-gradient(45deg, #b9c3c9, #e2e3f4);
+      border-radius: 3rem;
+      color: $navy;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: normal;
+      margin: 0 auto;
+      outline: none;
+      padding: 1rem 4rem;
+      text-align: center;
+      text-decoration: none;
+      width: 18rem;
+      &:hover {
+        background: linear-gradient(45deg, #e2e3f4, #b9c3c9);
+      }
+    }
+    .contactTwitter {
+      color: $twitterColor;
+      text-decoration: none;
+      font-weight: bold;
+      &:hover {
+        color: rgba(29, 161, 242, 0.7);
+      }
+    }
+  }
+}
+
+// .contactText {
+//   color: $navy;
+//   font-size: 2.4rem;
+//   margin-top: 3rem;
+//   text-align: center;
+// }
+// .inputCursor {
+//   margin: 1rem auto 0;
+//   position: relative;
+//   width: 80%;
+//   @include tab {
+//     max-width: 40rem;
+//   }
+//   @include pc {
+//     max-width: 40rem;
+//   }
+//   input[type="text"] {
+//     border: 0.1rem solid $navy;
+//     border-radius: 0.4rem;
+//     font-size: 1.5rem;
+//     outline: none;
+//     padding: 0.6rem;
+//     transition: 0.3s;
+//     width: 100%;
+//     &:focus {
+//       & + i {
+//         color: #a6b0b6;
+//       }
+//     }
+//     padding-left: 3rem;
+//   }
+//   input {
+//     color: $navy;
+//   }
+//   i {
+//     color: $navy;
+//     left: 1.5rem;
+//     position: absolute;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//   }
+// }
+
+// .inputContents {
+//   width: 80%;
+//   margin: 1rem auto 0;
+//   @include tab {
+//     max-width: 60rem;
+//   }
+//   @include pc {
+//     max-width: 60rem;
+//   }
+//   textarea {
+//     color: $navy;
+//     border: 0.1rem solid $navy;
+//     border-radius: 0.4rem;
+//     font-size: 1.5rem;
+//     padding: 0.6rem;
+//     padding-left: 1rem;
+//     outline: none;
+//     width: 100%;
+//     @include tab {
+//       font-size: 2rem;
+//     }
+//     @include pc {
+//       font-size: 2rem;
+//     }
+//   }
+// }
+
+// .contactSubmit {
+//   margin: 1rem auto 0;
+//   width: 50%;
+
+//   @include tab {
+//     max-width: 25rem;
+//   }
+//   @include pc {
+//     max-width: 25rem;
+//   }
+
+//   input[type="submit"] {
+//     animation: colorRotator 3s infinite alternate;
+//     background: linear-gradient(#b9c3c9, #e2e3f4);
+//     border-radius: 3rem;
+//     color: $navy;
+//     cursor: pointer;
+//     font-size: 2.4rem;
+//     font-weight: bold;
+//     margin: 0 auto;
+//     outline: none;
+//     text-align: center;
+//     width: 100%;
+//     &:hover {
+//       background: linear-gradient(#e2e3f4, #b9c3c9);
+//     }
+//     @keyframes colorRotator {
+//       0% {
+//         transform: rotete(0deg);
+//       }
+//       100% {
+//         transform: rotete(360deg);
+//       }
+//     }
+//   }
+// }

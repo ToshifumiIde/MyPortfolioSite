@@ -1,0 +1,200 @@
+header {
+  background-color: rgba(5, 5, 84, 0.9);
+  height: 5.6rem;
+  position: fixed;
+  transform: translate(0, 0);
+  width: 100%;
+  z-index: 1000;
+
+  @include pc {
+    height: 6.4rem;
+  }
+
+  .headerContainer {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    max-width: 124rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    .headerLogo {
+      a {
+        color: #fff;
+        font-size: 2rem;
+        font-weight: normal;
+        height: 100%;
+        line-height: 300%;
+        text-decoration: none;
+        cursor: pointer;
+        @include tab {
+          width: 50%;
+          font-size: 2.4rem;
+          line-height: 233%;
+          padding-right: 1.6rem;
+        }
+        @include pc {
+          color: #ddd;
+          font-size: 3.2rem;
+          line-height: 200%;
+          padding-right: 2rem;
+          width: 40%;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    } // headerLogo
+
+    .headerRight {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+      width: 40%;
+
+      @include tab {
+        width: 50%;
+      }
+
+      @include pc {
+        width: 55%;
+      }
+
+      //ハンバーガーメニューアイコン//
+      #ham {
+        border: 0.1rem solid #fff;
+        border-radius: 0.5rem;
+        height: 3.2rem;
+        width: 3.2rem;
+        z-index: 1000;
+      }
+      .ham {
+        cursor: pointer;
+        position: relative;
+        @include pc {
+          display: none;
+        }
+
+        .hamLine {
+          background-color: #fff;
+          height: 0.2rem;
+          position: absolute;
+          transition: 0.4s;
+          width: 80%;
+        }
+        .hamLine1 {
+          left: 10%;
+          top: 15%;
+          // top: 10%;
+        }
+        .hamLine2 {
+          left: 10%;
+          top: 45%;
+        }
+        .hamLine3 {
+          left: 10%;
+          top: 75%;
+          // top: 80%;
+        }
+      }
+
+      .clicked {
+        .hamLine1 {
+          transform: rotate(-45deg);
+          top: 45%;
+        }
+        .hamLine2 {
+          width: 0%;
+        }
+        .hamLine3 {
+          transform: rotate(45deg);
+          top: 45%;
+        }
+      }
+      //ハンバーガーメニューアイコン終了//
+
+      //////////////////////////////////
+      //ハンバーガーメニュー内のリスト//
+      //////////////////////////////////
+      .menuWrapper {
+        background-color: rgba(5, 5, 84, 0.9);
+        height: 50rem;
+        position: fixed;
+        padding-top: 3rem;
+        right: -300rem;
+        top: 5.6rem;
+        transition: 0.5s;
+        transition-timing-function: ease;
+        width: 60vw;
+        z-index: 1000;
+        @include tab {
+          top: 5.6rem;
+          height: 50rem;
+          width: 50vw;
+        }
+        @include pc {
+          top: 6.4rem;
+        }
+
+        .menuList a {
+          border-bottom: 1px solid #bbb;
+          color: #ddd;
+          display: block;
+          font-size: 2.5rem;
+          font-weight: normal;
+          line-height: 2rem;
+          padding: 3rem 0 0.5rem 1.5rem;
+          text-decoration: none;
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+          }
+        }
+      }
+      .clicked {
+        right: 0px;
+      } // ハンバーガーメニュー内のリスト終了
+
+      .pcMenu {
+        display: none;
+        @include pc {
+          display: block;
+          height: 100%;
+          width: 100%;
+        }
+        ul {
+          display: flex;
+          justify-content: flex-end;
+          a {
+            color: #ddd;
+            display: inline-block;
+            font-size: 2rem;
+            letter-spacing: 0.1rem;
+            line-height: 333%;
+            margin-left: 2.4rem;
+            position: relative;
+            text-decoration: none;
+            &:hover {
+              color: #fff;
+            }
+            &::after {
+              background: #fff;
+              bottom: 20px;
+              content: "";
+              height: 0.2rem;
+              left: 0;
+              position: absolute;
+              transform: scale(0, 1);
+              transform-origin: left top;
+              transition: transform 0.2s;
+              width: 100%;
+            }
+            &:hover::after {
+              transform: scale(1, 1);
+            }
+          } //a
+        } //ul
+      } //.pcMenu
+    }
+  } //headerRight
+}

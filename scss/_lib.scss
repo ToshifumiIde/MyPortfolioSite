@@ -1,0 +1,173 @@
+//////////////////
+//メディアクエリ//
+//////////////////
+
+$navy: rgb(5, 5, 84);
+$blue: #1944a9;
+$lightblue: #4c6bf9;
+$brightblue: #3428c1;
+$twitterColor: rgb(29, 161, 242);
+$facebookColor: rgb(59, 89, 152);
+$htmlColor: rgb(238, 76, 45);
+$cssColor: rgb(10, 78, 244);
+$sassColor: rgb(208, 98, 149);
+$jsColor: rgb(248, 216, 54);
+$reactColor: rgb(68, 218, 249);
+$gitHubColor: rgb(17, 15, 15);
+
+@mixin sp {
+  @media (max-width: 710px) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (min-width: 711px) and (max-width: 989px) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: 990px) {
+    @content;
+  }
+}
+
+//////////////////
+//     共通     //
+//////////////////
+
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1240px;
+}
+
+.title {
+  color: $navy;
+  font-family: sans-serif;
+  font-size: 5rem;
+  font-weight: normal;
+  height: 12rem;
+  line-height: 12rem;
+  text-align: center;
+  @include pc {
+    font-size: 7rem;
+    height: 16rem;
+    line-height: 16rem;
+  }
+}
+.titleWhite {
+  color: white;
+}
+
+// #cover {
+//   background: #000;
+//   opacity: 0.5;
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: 11;
+//   display: none;
+// }
+
+#menu {
+  i {
+    width: 2rem;
+    height: 2rem;
+  }
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  background: $navy;
+  padding: 20px 8px;
+  box-sizing: border-box;
+  width: 30%;
+  min-height: 100%;
+  transition: 0.4s;
+  .fa {
+    margin-left: auto;
+  }
+  a {
+    display: inline-block;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    &::after {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 0.2rem;
+      background: #fff;
+      transform: scale(0, 1);
+      transform-origin: left top;
+      transition: transform 0.3s;
+    }
+    &:hover::after {
+      transform: scale(1, 1);
+    }
+  }
+}
+
+#hide {
+  color: #ddd;
+  cursor: pointer;
+}
+
+body.menu-open {
+  overflow-y: hidden;
+}
+
+body.menu-open #cover {
+  display: block;
+}
+body.menu-open #menu {
+  right: 0;
+}
+
+.wrapper {
+  max-width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  min-height: 100vh; /* 追加 */
+  position: relative; /* 追加 */
+  -webkit-overflow-scrolling: touch; /* 追加 */
+}
+
+.brSp {
+  @include tab {
+    display: none;
+  }
+  @include pc {
+    display: none;
+  }
+}
+.brTab {
+  @include sp {
+    display: none;
+  }
+  @include pc {
+    display: none;
+  }
+}
+.brPc {
+  @include sp {
+    display: none;
+  }
+  @include tab {
+    display: none;
+  }
+}

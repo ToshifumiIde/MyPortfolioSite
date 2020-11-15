@@ -1,0 +1,115 @@
+#Skill {
+  background-color: rgb(240, 240, 240);
+  // background-attachment: fixed;
+  // background-image: url(../img/gustavo-espindola-qpmtL7N6J-E-unsplash.jpg);
+  // background-position: center 82%;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  margin: 0 auto;
+
+  .skillShadow {
+    // background-color: rgba(255, 255, 255, 0.1);
+    box-sizing: content-box;
+    height: 100%;
+    padding: 5.6rem 0 10rem;
+    width: 100%;
+
+    @include pc {
+      padding-top: 6.4rem;
+    }
+  }
+
+  .skillBox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 4rem 2rem 0;
+
+    @include tab {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    @include pc {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 124rem;
+    }
+
+    .skillCard {
+      background-color: #fff;
+      box-shadow: 1rem 1rem 1rem $navy;
+      color: $navy;
+      height: 23rem;
+      margin: 0 auto 3rem;
+      width: 75%;
+
+      @include tab {
+        width: 45%;
+        margin-bottom: 3rem;
+      }
+
+      @include pc {
+        height: 23rem;
+        margin-bottom: 3rem;
+        width: 22%;
+      }
+
+      .skillImg {
+        height: 60%;
+        position: relative;
+        width: 100%;
+
+        .fab,
+        .imgjQuery {
+          left: 50%;
+          position: absolute;
+          top: 60%;
+          transform: translate(-50%, -50%);
+        }
+        .imgjQuery {
+          width: 100px;
+          height: 100px;
+        }
+      }
+
+      .htmlRed {
+        color: $htmlColor;
+      }
+      .cssBlue {
+        color: $cssColor;
+      }
+      .sassPink {
+        color: $sassColor;
+      }
+      .jsYellow {
+        color: $jsColor;
+      }
+      .reactSkyblue {
+        color: $reactColor;
+      }
+      .gitHubBlack {
+        color: $gitHubColor;
+      }
+
+      .skillDesc {
+        font-size: 2.5rem;
+        text-align: center;
+      }
+      p {
+        padding-top: 2rem;
+        font-size: 1.2rem;
+        text-align: center;
+      }
+    }
+
+    .scrollFade {
+      opacity: 0;
+      transform: translateY(8rem);
+      transition: all 0.4s;
+    }
+  }
+}

@@ -1,0 +1,232 @@
+#Profile {
+  background-color: rgb(255, 255, 255);
+  padding: 5.6rem 0 9.6rem;
+  width: 100%;
+
+  @include tab {
+    padding-top: 5.6rem 0 4rem;
+  }
+
+  @include pc {
+    height: 88rem;
+    padding: 6.4rem 0;
+  }
+
+  .profileContainer {
+    margin: 0 auto;
+    position: relative;
+    @include tab {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60rem;
+    }
+    @include pc {
+      // align-items: center;
+      display: flex;
+      justify-content: space-between;
+      height: 56rem;
+      max-width: 124rem;
+      overflow: hidden;
+    }
+
+    // myPhoto //
+    .myPhoto {
+      height: 25rem;
+      margin: 2rem auto;
+      width: 25rem;
+      @include tab {
+        width: 100%;
+        height: 56rem;
+      }
+      @include pc {
+        width: 100%;
+        height: 56rem;
+        // padding: 0 4rem;
+        padding-right: 4rem;
+        margin: 0;
+      }
+      .imgBox {
+        background-image: url(../img/toshifumiide1.jpg);
+        background-position: top 0 left 60%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+
+        @include tab {
+          background-position: top 0 left 70%;
+          background-size: cover;
+          border-radius: 0;
+          overflow: hidden;
+          width: 100%;
+        }
+        @include pc {
+          background-position: center;
+          background-size: cover;
+          border-radius: 0;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+    // <!-- myPhoto --> //
+
+    // <!-- About Me --> //
+    .aboutMe {
+      align-items: center;
+      overflow: scroll;
+      padding: 0rem 3rem 0rem;
+      width: 100%;
+
+      @include tab {
+        background-color: rgba(5, 5, 84, 0.85);
+        height: 56rem;
+      }
+      @include pc {
+        background-color: rgba(5, 5, 84, 0.85);
+        height: 56rem;
+        padding: 2rem;
+      }
+
+      .aboutMeTitle {
+        color: $navy;
+        font-family: sans-serif;
+        font-size: 3rem;
+        font-weight: normal;
+        text-align: center;
+        padding: 0 0 1rem;
+        @include tab {
+          color: #eee;
+          padding: 1rem 0;
+        }
+        @include pc {
+          color: #eee;
+          font-size: 4rem;
+          padding: 2rem 0 1rem;
+        }
+      }
+
+      .iconColor {
+        color: #eee;
+      }
+
+      // profileWrap
+      .profileWrap {
+        display: flex;
+        background-color: rgba(5, 5, 84, 0.85);
+        padding-bottom: 1.6rem;
+        @include tab {
+          background-color: rgba(5, 5, 84, 0);
+        }
+        @include pc {
+          background-color: rgba(5, 5, 84, 0);
+        }
+
+        .icon {
+          // background-color: tomato;
+          padding-top: 2rem;
+          margin-left: 1.5rem;
+          @include tab {
+            margin-left: 0;
+            padding-top: 0.8rem;
+          }
+          @include pc {
+            margin-left: 0;
+            padding-top: 1.4rem;
+          }
+        }
+
+        .profileDesc {
+          padding: 0 2rem;
+
+          .profileDesc1,
+          .profileDesc2 {
+            p,
+            .profileChapter {
+              color: #fff;
+              font-size: 1.5rem;
+
+              @include tab {
+                font-size: 1.3rem;
+              }
+
+              @include pc {
+                font-size: 1.5rem;
+              }
+            }
+            .profileChapter {
+              padding-top: 1.8rem;
+            }
+
+            .myName {
+              color: #fff;
+              font-size: 2rem;
+              padding-top: 2rem;
+              @include tab {
+                font-size: 1.7rem;
+              }
+              @include pc {
+                font-size: 2.5rem;
+              }
+            }
+
+            .myStrength {
+              color: #eee;
+              font-size: 1.6rem;
+              line-height: 2rem;
+              @include tab {
+                font-size: 1.3rem;
+              }
+              @include pc {
+                font-size: 1.5rem;
+              }
+              .colon {
+                @include sp {
+                  display: none;
+                }
+
+                @include tab {
+                  display: none;
+                }
+              }
+            }
+          }
+
+          .profileDesc3 {
+            padding: 2rem 0;
+            .facebook {
+              text-decoration: none;
+              font-size: 2rem;
+              .bg-facebook {
+                color: $facebookColor;
+              }
+            }
+            .twitter {
+              color: $twitterColor;
+              font-size: 2rem;
+              font-family: "Font Awesome 5 Brands";
+              text-decoration: none;
+              &:hover {
+                color: rgba(29, 161, 242, 0.7);
+              }
+              .fab {
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .slideContsL {
+      transform: translateX(-100rem);
+      transition: all 0.7s;
+    }
+    .slideContsR {
+      transform: translateX(100rem);
+      transition: all 0.7s;
+    }
+  }
+}
