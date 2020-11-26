@@ -2,15 +2,18 @@
 
 {
   $(function () {
-    $("body").css("overflow", "hidden"); //初期状態ではスクロール不可
+    //初期状態ではスクロール不可//
+    $("body").css("overflow", "hidden"); 
 
     ////////////////////////////////////////////////
     //ロード完了まで、スクロール処理を実行させない//
     ////////////////////////////////////////////////
     $(window).on("load", function () {
       const loadingView = $(".loadingView");
-      loadingView.fadeOut(100); //ロードが完了したら.loadingViewを非表示に
-      $("body").css("overflow", "auto"); //ロード完了後、スクロールを可能にする
+      //ロードが完了後.loadingViewを非表示
+      loadingView.fadeOut(100);
+      //ロード完了後、スクロール可能
+      $("body").css("overflow", "auto"); 
     });
 
     //////////////////////////////
@@ -35,20 +38,20 @@
     ////////////////////////////////////
     $("a[href ^=#]").click(function () {
       let speed = 400;
-      let href = $(this).attr("href"); // アンカーhref属性の値を取得
+      //アンカーhref属性の値を取得
+      let href = $(this).attr("href");
       let target = $((href == "#") | (href == "") ? "html" : href);
-      let position = target.offset().top; // 移動先を数値で取得
+      //移動先を数値で取得
+      let position = target.offset().top; 
       $($.support.safari ? "body" : "html").animate(
         { scrollTop: position },
         speed,
         "swing"
       );
       if ($(".ham").hasClass("clicked")) {
-        //.hamに"clicked"があった場合
         $(".ham").removeClass("clicked"); //外す
       }
       if ($(".menuWrapper").hasClass("clicked")) {
-        //.menuWrapperに"clicked"があった場合
         $(".menuWrapper").removeClass("clicked"); //外す
       }
       return false; // URLにアンカーリンクを付加させない
@@ -57,11 +60,15 @@
     ////////////////////////////
     //eyecatchのスライドショー//
     ////////////////////////////
-    let page = 0; //①ページの概念・初期ページを設定
-    let lastPage = parseInt($("#sliderWrap #slider").length - 1); //②イメージの数を最後のページ数として変数化
+    //①ページの概念・初期ページを設定
+    let page = 0;
+    //②イメージ数 = 最後のページ数として変数化
+    let lastPage = parseInt($("#sliderWrap #slider").length - 1); 
     let Timer;
-    $("#sliderWrap #slider").css("display", "none"); //③最初に全部のイメージを一旦非表示にする
-    $("#sliderWrap #slider").eq(page).css("display", "block"); //④初期ページを表示
+    //③最初に全部の画像を一旦非表示
+    $("#sliderWrap #slider").css("display", "none");
+    //④初期ページを表示
+    $("#sliderWrap #slider").eq(page).css("display", "block");
     //⑤ページ切換用、自作関数作成
     function changePage() {
       $("#sliderWrap #slider").fadeOut(1500);
@@ -92,13 +99,14 @@
   $(".toTop").css("display", "none");
   $(window).scroll(function () {
     //////////////////////
-    // toTopのarrow表示 //
+    // toTopの表示 //
     //////////////////////
     $(".toTop").each(function () {
-      let scroll = $(window).scrollTop(); //ページのトップからスクロールした距離
-      let targetElement = $("#Eyecatch").offset().top; //ターゲットまでのトップからの距離
+      //ページトップからスクロールした距離
+      let scroll = $(window).scrollTop();
+      //ターゲットまでのトップからの距離
+      let targetElement = $("#Eyecatch").offset().top; 
       let windowHeight = $(window).height(); //実際のwindowの高さ（デバイスによって可変する）
-
       if (scroll > targetElement + 200) {
         // $(this).css("display", "block");
         $(this).fadeIn(400);

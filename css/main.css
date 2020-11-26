@@ -310,7 +310,7 @@ body.menu-open #menu {
 footer {
   background-color: #050554;
   margin: 0 auto;
-  height: 8rem;
+  height: 9rem;
 }
 @media (min-width: 990px) {
   footer {
@@ -321,7 +321,7 @@ footer ul {
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
   width: 80%;
 }
 @media (min-width: 990px) {
@@ -869,6 +869,150 @@ footer .copyRight {
   transition: all 0.4s;
 }
 
+#Portfolio {
+  margin: 0 auto;
+}
+@media (min-width: 990px) {
+  #Portfolio {
+    background-attachment: fixed;
+    background-image: url(../img/moon2.jpg);
+    background-position: 0% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+#Portfolio .worksShadow {
+  background-color: rgba(100, 100, 100, 0.1);
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 5.8rem;
+  width: 100%;
+}
+@media (min-width: 990px) {
+  #Portfolio .worksShadow {
+    padding-top: 6.4rem;
+  }
+}
+#Portfolio .worksWrap {
+  display: flex;
+  flex-direction: column;
+  max-width: 124rem;
+  margin: 0 auto;
+  padding: 4rem;
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  #Portfolio .worksWrap {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 990px) {
+  #Portfolio .worksWrap {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+#Portfolio .worksCardFlame {
+  border-radius: 0.3rem;
+  color: #fff;
+  height: 25rem;
+  margin: 3rem auto 0;
+  overflow: hidden;
+  width: 80%;
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  #Portfolio .worksCardFlame {
+    width: 45%;
+  }
+}
+@media (min-width: 990px) {
+  #Portfolio .worksCardFlame {
+    width: 28%;
+  }
+}
+#Portfolio .worksCardFlame:hover {
+  cursor: pointer;
+}
+#Portfolio .worksCardFlame2-2,
+#Portfolio .worksCardFlame3-2,
+#Portfolio .worksCardFlame5-2 {
+  display: none;
+}
+#Portfolio .worksCard {
+  height: 100%;
+  position: relative;
+  text-align: center;
+  transition: 0.4s;
+  vertical-align: center;
+  width: 100%;
+}
+#Portfolio .worksCard:hover {
+  transform: scale(1.04, 1.04);
+}
+#Portfolio .worksCard i {
+  padding-top: 15%;
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  #Portfolio .worksCard i {
+    padding-top: 25%;
+  }
+}
+@media (min-width: 990px) {
+  #Portfolio .worksCard i {
+    padding-top: 25%;
+  }
+}
+#Portfolio .worksCardShadow {
+  position: absolute;
+  background-color: rgba(5, 5, 84, 0.6);
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+#Portfolio .worksCardFlame:hover .worksCardShadow {
+  visibility: visible;
+  transition: 0.4s;
+}
+#Portfolio .worksDesc {
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+}
+#Portfolio .worksTitle {
+  color: #ccc;
+  font-size: 1.2rem;
+  top: 50%;
+}
+#Portfolio .worksDesc0 {
+  color: #fff;
+  font-size: 1.7rem;
+  top: 60%;
+}
+#Portfolio .worksDesc1 {
+  color: #ccc;
+  font-size: 1.2rem;
+  top: 70%;
+}
+#Portfolio .worksCardFlame:hover .worksDesc {
+  transition: 0.4s;
+  visibility: visible;
+  opacity: 1;
+}
+#Portfolio .worksCardFlame:hover .worksTitle {
+  top: 45%;
+}
+#Portfolio .worksCardFlame:hover .worksDesc0 {
+  top: 55%;
+}
+#Portfolio .worksCardFlame:hover .worksDesc1 {
+  top: 65%;
+}
+
 #Profile {
   background-color: white;
   padding: 5.6rem 0 9.6rem;
@@ -931,8 +1075,8 @@ footer .copyRight {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 @media (min-width: 711px) and (max-width: 989px) {
   #Profile .profileContainer .myPhoto .imgBox {
@@ -1104,27 +1248,25 @@ footer .copyRight {
     display: none;
   }
 }
-#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc3 {
-  padding: 2rem 0;
-}
-#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc3 .facebook {
-  text-decoration: none;
-  font-size: 2rem;
-}
-#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc3 .facebook .bg-facebook {
-  color: #3b5998;
-}
-#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc3 .twitter {
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns .fa-twitter,
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns .fa-twitter {
   color: #1da1f2;
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Font Awesome 5 Brands";
   text-decoration: none;
 }
-#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc3 .twitter:hover {
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns .fa-twitter:hover,
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns .fa-twitter:hover {
   color: rgba(29, 161, 242, 0.7);
 }
-#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc3 .twitter .fab {
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns .fab,
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns .fab {
   vertical-align: middle;
+}
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns .fa-github,
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns .fa-github {
+  color: #110f0f;
+  font-size: 3rem;
 }
 #Profile .profileContainer .slideContsL {
   transform: translateX(-100rem);
@@ -1516,11 +1658,11 @@ header .headerContainer .headerRight .pcMenu ul a:hover::after {
 .loadingView {
   background-color: #050554;
   height: 100vh;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
-  z-index: 9999;
   width: 100%;
+  z-index: 9999;
 }
 .loadingView .loader {
   animation: load5 1.3s infinite ease;
