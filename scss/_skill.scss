@@ -21,20 +21,20 @@
 
   .skillBox {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     margin: 0 auto;
     padding: 4rem 2rem 0;
-
+    flex-wrap: wrap;
+    @include sp {
+      flex-direction: column;
+    }
     @include tab {
       flex-direction: row;
       justify-content: space-between;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
     }
-
     @include pc {
       flex-direction: row;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
       justify-content: space-between;
       max-width: 124rem;
     }
