@@ -157,11 +157,22 @@ body {
 .title {
   color: #050554;
   font-family: sans-serif;
-  font-size: 5rem;
   font-weight: normal;
-  height: 12rem;
-  line-height: 12rem;
   text-align: center;
+}
+@media (max-width: 710px) {
+  .title {
+    font-size: 5rem;
+    height: 12rem;
+    line-height: 12rem;
+  }
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  .title {
+    font-size: 5rem;
+    height: 12rem;
+    line-height: 12rem;
+  }
 }
 @media (min-width: 990px) {
   .title {
@@ -872,31 +883,147 @@ footer .copyRight {
 }
 
 #Portfolio .portfolioBox {
+  margin: 0 auto;
   padding: 4rem 2rem 0;
+}
+@media (max-width: 710px) {
+  #Portfolio .portfolioBox {
+    max-width: 100%;
+  }
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  #Portfolio .portfolioBox {
+    max-width: 100%;
+  }
 }
 @media (min-width: 990px) {
   #Portfolio .portfolioBox {
     max-width: 124rem;
   }
 }
-#Portfolio .worksConts {
+#Portfolio .portfolioBox .worksWrap .useLanguage {
+  text-align: center;
+  color: #050554;
+  font-family: serif;
+}
+@media (max-width: 710px) {
+  #Portfolio .portfolioBox .worksWrap .useLanguage {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  #Portfolio .portfolioBox .worksWrap .useLanguage {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 990px) {
+  #Portfolio .portfolioBox .worksWrap .useLanguage {
+    font-size: 5rem;
+  }
+}
+#Portfolio .portfolioBox .worksWrap .worksTitle {
+  background-color: #3428c1;
+  color: #fff;
+  display: inline-block;
+  font-size: 2.5rem;
+  margin: 0 auto;
+  text-align: center;
+}
+#Portfolio .portfolioBox .worksWrap .worksOverview {
+  text-align: center;
+}
+@media (max-width: 710px) {
+  #Portfolio .portfolioBox .worksWrap .worksOverview {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  #Portfolio .portfolioBox .worksWrap .worksOverview {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 710px) {
+  #Portfolio .portfolioBox .worksWrap .worksOverview {
+    font-size: 2.4rem;
+  }
+}
+@media (max-width: 710px) {
+  #Portfolio .portfolioBox .appImg {
+    width: 100%;
+  }
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  #Portfolio .portfolioBox .appImg {
+    width: 45rem;
+  }
+}
+@media (min-width: 990px) {
+  #Portfolio .portfolioBox .appImg {
+    height: auto;
+    width: 50rem;
+  }
+}
+#Portfolio .portfolioBox .worksConts {
   background-color: #fff;
   display: flex;
 }
 @media (max-width: 710px) {
-  #Portfolio .worksConts {
+  #Portfolio .portfolioBox .worksConts {
     flex-direction: column;
   }
 }
 @media (min-width: 711px) and (max-width: 989px) {
-  #Portfolio .worksConts {
+  #Portfolio .portfolioBox .worksConts {
     flex-direction: row;
   }
 }
 @media (min-width: 990px) {
-  #Portfolio .worksConts {
+  #Portfolio .portfolioBox .worksConts {
     flex-direction: row;
   }
+}
+#Portfolio .portfolioBox .worksConts .worksAnimation,
+#Portfolio .portfolioBox .worksConts .worksDesc {
+  color: #050554;
+}
+@media (max-width: 710px) {
+  #Portfolio .portfolioBox .worksConts .worksAnimation,
+  #Portfolio .portfolioBox .worksConts .worksDesc {
+    width: 100%;
+  }
+}
+@media (min-width: 990px) {
+  #Portfolio .portfolioBox .worksConts .worksAnimation,
+  #Portfolio .portfolioBox .worksConts .worksDesc {
+    width: 50%;
+  }
+}
+#Portfolio .portfolioBox .worksConts .film::before {
+  color: #888;
+  content: "\f008";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+#Portfolio .portfolioBox .worksConts .link::before {
+  color: #888;
+  content: "\f0c1";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+#Portfolio .portfolioBox .worksConts .overview::before {
+  content: "\f15c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+}
+#Portfolio .portfolioBox .worksConts .point::before {
+  color: #f2be42;
+  content: "\f0eb";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+}
+#Portfolio .portfolioBox .worksConts .fa-check-circle {
+  color: green;
+  font-size: 1.6rem;
 }
 
 #Profile {

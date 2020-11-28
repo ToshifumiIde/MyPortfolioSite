@@ -1,161 +1,121 @@
 #Portfolio {
-  // background-attachment: fixed;
-  // background-image: url(../img/moon2.jpg);
-  // background-position: 0% 20%;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // margin: 0 auto;
-
-  // .worksShadow {
-  //   @include sp {
-  //     padding-top: 5.8rem;
-  //   }
-  //   @include tab {
-  //     padding-top: 5.8rem;
-  //   }
-  //   @include pc {
-  //     padding-top: 6.4rem;
-  //   }
-  //   background-color: rgba(100, 100, 100, 0.1);
-  //   box-sizing: border-box;
-  //   height: 100%;
-  //   width: 100%;
-  // }
-
-  // .worksWrap {
-  //   display: flex;
-  //   flex-direction: column;
-  //   max-width: 124rem;
-  //   margin: 0 auto;
-  //   padding: 4rem;
-  //   @include tab {
-  //     flex-direction: row;
-  //     flex-wrap: wrap;
-  //     justify-content: space-between;
-  //   }
-  //   @include pc {
-  //     flex-direction: row;
-  //     flex-wrap: wrap;
-  //     justify-content: space-between;
-  //   }
-  // }
-
   .portfolioBox {
-    padding:4rem 2rem 0;
+    margin: 0 auto;
+    padding: 4rem 2rem 0;
+    @include sp {
+      max-width: 100%;
+    }
+    @include tab {
+      max-width: 100%;
+    }
     @include pc {
       max-width: 124rem;
     }
+    .worksWrap {
+      .useLanguage {
+        text-align: center;
+        color: $navy;
+        font-family: serif;
+        @include sp {
+          font-size: 4rem;
+        }
+        @include tab {
+          font-size: 4rem;
+        }
+        @include pc {
+          font-size: 5rem;
+        }
+      }
+      .worksTitle {
+        background-color: $brightBlue;
+        color: #fff;
+        display: inline-block;
+        font-size: 2.5rem;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .worksOverview {
+        @include sp {
+          font-size: 1.6rem;
+        }
+        @include tab {
+          font-size: 2rem;
+        }
+        @include sp {
+          font-size: 2.4rem;
+        }
+        text-align: center;
+      }
+    }
+    .appImg {
+      @include sp {
+        width: 100%;
+      }
+      @include tab {
+        width: 45rem;
+      }
+      @include pc {
+        height: auto;
+        width: 50rem;
+      }
+    }
+    .worksConts {
+      background-color: #fff;
+      display: flex;
+      @include sp {
+        flex-direction: column;
+      }
+      @include tab {
+        flex-direction: row;
+      }
+      @include pc {
+        flex-direction: row;
+      }
+      .worksAnimation,
+      .worksDesc {
+        color: $navy;
+        @include sp {
+          width: 100%;
+        }
+        @include pc {
+          width: 50%;
+        }
+      }
+      .film {
+        &::before {
+          color: #888;
+          content: "\f008";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+        }
+      }
+      .link {
+        &::before {
+          color: #888;
+          content: "\f0c1";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+        }
+      }
+      .overview {
+        &::before {
+          content: "\f15c";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 400;
+        }
+      }
+      .point {
+        &::before {
+          color: rgb(242, 190, 66);
+          content: "\f0eb";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 400;
+        }
+      }
+      .fa-check-circle {
+        color: green;
+        font-size: 1.6rem;
+      }
+    }
   }
-
-  .worksConts {
-    background-color: #fff;
-    display: flex;
-    @include sp {
-      flex-direction: column;
-    }
-    @include tab {
-      flex-direction: row;
-    }
-    @include pc {
-      flex-direction: row;
-    }
-  }
-
-  // .worksCardFlame {
-  //   @include sp {
-  //     width: 80%;
-  //   }
-  //   @include tab {
-  //     width: 45%;
-  //   }
-  //   @include pc {
-  //     width: 28%;
-  //   }
-  //   border-radius: 0.3rem;
-  //   color: #fff;
-  //   height: 25rem;
-  //   margin: 3rem auto 0;
-  //   overflow: hidden;
-  //   &:hover {
-  //     cursor: pointer;
-  //   }
-  // }
-  // .worksCardFlame2-2,
-  // .worksCardFlame3-2,
-  // .worksCardFlame5-2 {
-  //   display: none;
-  // } //SP版サイトの非表示
-
-  // .worksCard {
-  //   height: 100%;
-  //   position: relative;
-  //   text-align: center;
-  //   transition: 0.4s;
-  //   vertical-align: center;
-  //   width: 100%;
-  //   &:hover {
-  //     transform: scale(1.04, 1.04);
-  //   }
-  //   i {
-  //     @include sp {
-  //       padding-top: 15%;
-  //     }
-  //     @include tab {
-  //       padding-top: 25%;
-  //     }
-  //     @include pc {
-  //       padding-top: 25%;
-  //     }
-  //   }
-  // }
-
-  // .worksCardShadow {
-  //   position: absolute;
-  //   background-color: rgba($navy, 0.6);
-  //   width: 100%;
-  //   height: 100%;
-  //   visibility: hidden;
-  // }
-  // .worksCardFlame:hover .worksCardShadow {
-  //   visibility: visible;
-  //   transition: 0.4s;
-  // }
-  // .worksDesc {
-  //   left: 50%;
-  //   position: absolute;
-  //   transform: translate(-50%, -50%);
-  //   opacity: 0;
-  //   visibility: hidden;
-  //   width: 100%;
-  // }
-  // .worksTitle {
-  //   color: #ccc;
-  //   font-size: 1.2rem;
-  //   top: 50%;
-  // }
-  // .worksDesc0 {
-  //   color: #fff;
-  //   font-size: 1.7rem;
-  //   top: 60%;
-  // }
-  // .worksDesc1 {
-  //   color: #ccc;
-  //   font-size: 1.2rem;
-  //   top: 70%;
-  // }
-
-  // .worksCardFlame:hover .worksDesc {
-  //   transition: 0.4s;
-  //   visibility: visible;
-  //   opacity: 1;
-  // }
-  // .worksCardFlame:hover .worksTitle {
-  //   top: 45%;
-  // }
-  // .worksCardFlame:hover .worksDesc0 {
-  //   top: 55%;
-  // }
-  // .worksCardFlame:hover .worksDesc1 {
-  //   top: 65%;
-  // }
 }
