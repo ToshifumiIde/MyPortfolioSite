@@ -35,10 +35,10 @@
         text-align: center;
         &::after {
           @include sp {
-            bottom:-0.8rem;
+            bottom: -0.8rem;
           }
-          @include tab{
-            bottom:-0.8rem;
+          @include tab {
+            bottom: -0.8rem;
           }
           background-color: $navy;
           bottom: 0.8rem;
