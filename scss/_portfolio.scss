@@ -17,10 +17,11 @@
       .useLanguage {
         @include sp {
           font-size: 3.6rem;
+          margin-bottom: 2rem;
         }
         @include tab {
           font-size: 4rem;
-          line-height: 5.6rem;
+          margin-bottom: 2.4rem;
         }
         @include pc {
           font-size: 5.6rem;
@@ -33,6 +34,12 @@
         position: relative;
         text-align: center;
         &::after {
+          @include sp {
+            bottom:-0.8rem;
+          }
+          @include tab{
+            bottom:-0.8rem;
+          }
           background-color: $navy;
           bottom: 0.8rem;
           content: "";
@@ -77,6 +84,13 @@
           height: 6.4rem;
         }
         text-align: center;
+        &::after {
+          background-color: #cfcfcf;
+          bottom: -0.8rem;
+          content: "";
+          height: 0.2rem;
+          width: 40rem;
+        }
       }
 
       .portfolioUnit {
@@ -128,7 +142,8 @@
             padding-bottom: 4rem;
             .video {
               @include sp {
-                width: 100%;
+                width: 80%;
+                height: 20vh;
               }
               @include tab {
                 width: 90%;
@@ -156,35 +171,9 @@
             }
           }
 
-          // .portfolioDesc {
-          //   @include sp {
-          //     font-size: 2rem;
-          //     line-height: 3.2rem;
-          //   }
-          //   @include tab {
-          //     font-size: 2rem;
-          //     line-height: 4rem;
-          //   }
-          //   @include pc {
-          //     font-size: 2.4rem;
-          //     line-height: 4.8rem;
-          //     height: 5.6rem;
-          //   }
-          //   display: inline-block;
-          // }
-
           .portfolioDescList {
-            // background-color: blue;
             text-align: start;
-            // @include sp {
-            //   padding-left: 4.8rem;
-            // }
-            // @include tab {
-            //   padding-left: 3.2rem;
-            // }
-            // @include pc {
-            //   padding-left: 8rem;
-            // }
+            margin-bottom: 1.6rem;
           }
 
           .portfolioDetail {
@@ -213,8 +202,8 @@
           }
           @include pc {
             font-size: 2.4rem;
-            line-height: 4.8rem;
             height: 5.6rem;
+            line-height: 4.8rem;
           }
           display: inline-block;
           text-align: center;

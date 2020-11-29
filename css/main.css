@@ -941,12 +941,13 @@ footer .copyRight {
 @media (max-width: 710px) {
   #Portfolio .portfolioContainer .portfolioGroup .useLanguage {
     font-size: 3.6rem;
+    margin-bottom: 2rem;
   }
 }
 @media (min-width: 711px) and (max-width: 989px) {
   #Portfolio .portfolioContainer .portfolioGroup .useLanguage {
     font-size: 4rem;
-    line-height: 5.6rem;
+    margin-bottom: 2.4rem;
   }
 }
 @media (min-width: 990px) {
@@ -966,6 +967,16 @@ footer .copyRight {
   transform: translate(-50%, -50%);
   position: absolute;
   width: 7.2rem;
+}
+@media (max-width: 710px) {
+  #Portfolio .portfolioContainer .portfolioGroup .useLanguage::after {
+    bottom: -0.8rem;
+  }
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  #Portfolio .portfolioContainer .portfolioGroup .useLanguage::after {
+    bottom: -0.8rem;
+  }
 }
 #Portfolio .portfolioContainer .portfolioGroup .portfolioContent {
   border: 0.1rem solid #cfcfcf;
@@ -1011,6 +1022,13 @@ footer .copyRight {
     font-size: 3.2rem;
     height: 6.4rem;
   }
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioTitle::after {
+  background-color: #cfcfcf;
+  bottom: -0.8rem;
+  content: "";
+  height: 0.2rem;
+  width: 40rem;
 }
 #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioImage {
   text-align: center;
@@ -1073,7 +1091,8 @@ footer .copyRight {
 }
 @media (max-width: 710px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioThumbnail .video {
-    width: 100%;
+    width: 80%;
+    height: 20vh;
   }
 }
 @media (min-width: 711px) and (max-width: 989px) {
@@ -1108,6 +1127,7 @@ footer .copyRight {
 }
 #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioDescList {
   text-align: start;
+  margin-bottom: 1.6rem;
 }
 @media (max-width: 710px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioDetail {
@@ -1146,8 +1166,8 @@ footer .copyRight {
 @media (min-width: 990px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioDesc {
     font-size: 2.4rem;
-    line-height: 4.8rem;
     height: 5.6rem;
+    line-height: 4.8rem;
   }
 }
 #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .film {
@@ -1227,7 +1247,7 @@ footer .copyRight {
 }
 
 #Profile {
-  background-color: white;
+  background-color: #fcfcfc;
   padding: 5.6rem 0 9.6rem;
   width: 100%;
 }
