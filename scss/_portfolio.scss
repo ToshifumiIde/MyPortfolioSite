@@ -1,121 +1,379 @@
 #Portfolio {
-  .portfolioBox {
-    margin: 0 auto;
-    padding: 4rem 2rem 0;
-    @include sp {
-      max-width: 100%;
-    }
-    @include tab {
-      max-width: 100%;
-    }
-    @include pc {
-      max-width: 124rem;
-    }
-    .worksWrap {
+  @include sp {
+    max-width: 100%;
+  }
+  @include tab {
+    max-width: 100%;
+  }
+  @include pc {
+    max-width: 124rem;
+  }
+  color: $navy;
+  margin: 0 auto;
+  padding: 4rem 2rem 0;
+
+  .portfolioContainer {
+    .portfolioGroup {
+
       .useLanguage {
-        text-align: center;
+        @include sp {
+          font-size: 4rem;
+        }
+        @include tab {
+          font-size: 4rem;
+        }
+        @include pc {
+          font-size: 6rem;
+        }
         color: $navy;
         font-family: serif;
-        @include sp {
-          font-size: 4rem;
-        }
-        @include tab {
-          font-size: 4rem;
-        }
-        @include pc {
-          font-size: 5rem;
-        }
-      }
-      .worksTitle {
-        background-color: $brightBlue;
-        color: #fff;
-        display: inline-block;
-        font-size: 2.5rem;
         margin: 0 auto;
+        position: relative;
         text-align: center;
-      }
-      .worksOverview {
-        @include sp {
-          font-size: 1.6rem;
+        &::after {
+          background-color: $navy;
+          bottom: -0.4rem;
+          content: "";
+          display: block;
+          width: 5.6rem;
+          height: 0.2rem;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          position: absolute;
         }
-        @include tab {
+      }
+
+      .portfolioTitle {
+        @include sp {
           font-size: 2rem;
         }
-        @include sp {
+        @include tab {
           font-size: 2.4rem;
+        }
+        @include pc {
+          font-size: 3.2rem;
         }
         text-align: center;
       }
-    }
-    .appImg {
-      @include sp {
-        width: 100%;
+
+      .portfolioContent {
       }
-      @include tab {
-        width: 45rem;
-      }
-      @include pc {
-        height: auto;
-        width: 50rem;
-      }
-    }
-    .worksConts {
-      background-color: #fff;
-      display: flex;
-      @include sp {
-        flex-direction: column;
-      }
-      @include tab {
-        flex-direction: row;
-      }
-      @include pc {
-        flex-direction: row;
-      }
-      .worksAnimation,
-      .worksDesc {
-        color: $navy;
-        @include sp {
-          width: 100%;
+
+      .portfolioUnit {
+        .portfolioImage {
+          text-align: center;
+          .reference {
+            @include sp {
+              width: 100%;
+            }
+            @include tab {
+              width: 40rem;
+            }
+            @include pc {
+              width: 45rem;
+            }
+
+            display: block;
+            height: auto;
+            margin: 0 auto;
+            .appImg {
+              height: auto;
+              width: 100%;
+            }
+          }
         }
-        @include pc {
-          width: 50%;
+
+        .portfolioModule {
+          @include sp {
+            flex-direction: column;
+          }
+          @include tab {
+            flex-direction: row;
+          }
+          @include pc {
+            flex-direction: row;
+          }
+          display: flex;
+
+          .portfolioThumbnail {
+            text-align: center;
+            width: 100%;
+            .video {
+              @include sp {
+                width: 100%;
+              }
+              @include tab {
+                width: 100%;
+              }
+              @include pc {
+                width: 70%;
+              }
+              height: 25rem;
+            }
+          }
+
+          .portfolioAbout {
+            text-align: center;
+            width: 100%;
+          }
+
+          .portfolioDesc {
+            @include sp {
+              font-size: 2.4rem;
+              line-height: 3.2rem;
+            }
+            @include tab {
+              font-size: 2.4rem;
+              line-height: 4rem;
+            }
+            @include pc {
+              font-size: 2.4rem;
+              line-height: 3.2rem;
+            }
+            display: inline-block;
+            text-align: center;
+          }
+
+          .portfolioDescList {
+            text-align: start;
+          }
+
+          .portfolioDetail {
+            font-size: 1.6rem;
+            line-height: 4rem;
+          }
         }
-      }
-      .film {
-        &::before {
-          color: #888;
-          content: "\f008";
-          font-family: "Font Awesome 5 Free";
-          font-weight: 900;
+        .portfolioDesc {
+          @include sp {
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+          }
+          @include tab {
+            font-size: 2.4rem;
+            line-height: 4rem;
+          }
+          @include pc {
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+          }
+          display: inline-block;
+          text-align: center;
         }
-      }
-      .link {
-        &::before {
-          color: #888;
-          content: "\f0c1";
-          font-family: "Font Awesome 5 Free";
-          font-weight: 900;
+
+
+        ////////////////////////////////
+        //擬似要素によるアイコンの追加//
+        ////////////////////////////////
+        .film {
+          position: relative;
+          &::before,
+          &::after {
+            color: #bbb;
+            content: "\f008";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+          }
+          &::before {
+            left: -3.6rem;
+          }
+          &::after {
+            right: -3.6rem;
+          }
         }
-      }
-      .overview {
-        &::before {
-          content: "\f15c";
-          font-family: "Font Awesome 5 Free";
-          font-weight: 400;
+        .link {
+          position: relative;
+          &::before,
+          &::after {
+            color: #bbb;
+            content: "\f0c1";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+          }
+          &::before {
+            left: -3.6rem;
+          }
+          &::after {
+            right: -3.6rem;
+          }
         }
-      }
-      .point {
-        &::before {
-          color: rgb(242, 190, 66);
-          content: "\f0eb";
-          font-family: "Font Awesome 5 Free";
-          font-weight: 400;
+        .overview {
+          position: relative;
+          &::before,
+          &::after {
+            color: #bbb;
+            content: "\f15c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 400;
+            position: absolute;
+          }
+          &::before {
+            left: -3.6rem;
+          }
+          &::after {
+            right: -3.6rem;
+          }
         }
-      }
-      .fa-check-circle {
-        color: green;
-        font-size: 1.6rem;
+        .point {
+          position: relative;
+          &::before,
+          &::after {
+            color: rgb(242, 190, 66);
+            content: "\f0eb";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 400;
+            position: absolute;
+          }
+          &::before {
+            left: -3.6rem;
+          }
+          &::after {
+            right: -3.6rem;
+          }
+        }
+        .check {
+          position: relative;
+          &::before {
+            color: $brightBlue;
+            content: "\f058";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 400;
+            left: -2.4rem;
+            position: absolute;
+          }
+        }
       }
     }
   }
+
+//   .portfolioBox {
+//     margin: 0 auto;
+//     padding: 4rem 2rem 0;
+//     @include sp {
+//       max-width: 100%;
+//     }
+//     @include tab {
+//       max-width: 100%;
+//     }
+//     @include pc {
+//       max-width: 124rem;
+//     }
+//     .worksWrap {
+//       .useLanguage {
+//         text-align: center;
+//         color: $navy;
+//         font-family: serif;
+//         @include sp {
+//           font-size: 4rem;
+//         }
+//         @include tab {
+//           font-size: 4rem;
+//         }
+//         @include pc {
+//           font-size: 5rem;
+//         }
+//       }
+//       .worksTitle {
+//         background-color: $brightBlue;
+//         color: #fff;
+//         display: inline-block;
+//         font-size: 2.5rem;
+//         margin: 0 auto;
+//         text-align: center;
+//       }
+//       .worksOverview {
+//         @include sp {
+//           font-size: 1.6rem;
+//         }
+//         @include tab {
+//           font-size: 2rem;
+//         }
+//         @include sp {
+//           font-size: 2.4rem;
+//         }
+//         text-align: center;
+//       }
+//     }
+//     .appImg {
+//       @include sp {
+//         width: 100%;
+//       }
+//       @include tab {
+//         width: 45rem;
+//       }
+//       @include pc {
+//         height: auto;
+//         width: 50rem;
+//       }
+//     }
+//     .worksConts {
+//       background-color: #fff;
+//       display: flex;
+//       @include sp {
+//         flex-direction: column;
+//       }
+//       @include tab {
+//         flex-direction: row;
+//       }
+//       @include pc {
+//         flex-direction: row;
+//       }
+//       .worksAnimation,
+//       .worksDesc {
+//         color: $navy;
+//         @include sp {
+//           width: 100%;
+//         }
+//         @include pc {
+//           width: 50%;
+//         }
+//       }
+
+//       .film {
+//         &::before {
+//           color: #bbb;
+//           content: "\f008";
+//           font-family: "Font Awesome 5 Free";
+//           font-weight: 900;
+//         }
+//       }
+//       .link {
+//         &::before {
+//           color: #666;
+//           content: "\f0c1";
+//           font-family: "Font Awesome 5 Free";
+//           font-weight: 900;
+//         }
+//       }
+//       .overview {
+//         &::before {
+//           color: #666;
+//           content: "\f15c";
+//           font-family: "Font Awesome 5 Free";
+//           font-weight: 400;
+//         }
+//       }
+//       .point {
+//         &::before {
+//           color: rgb(242, 190, 66);
+//           content: "\f0eb";
+//           font-family: "Font Awesome 5 Free";
+//           font-weight: 400;
+//         }
+//       }
+//       .check {
+//         &::before {
+//           color: $green;
+//           content: "\f058";
+//           font-family: "Font Awesome 5 Free";
+//           font-weight: 400;
+//         }
+//       }
+//       .fa-check-circle {
+//         color: $green;
+//         font-size: 1.6rem;
+//       }
+//     }
+//   }
 }

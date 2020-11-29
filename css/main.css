@@ -882,148 +882,273 @@ footer .copyRight {
   transition: all 0.4s;
 }
 
-#Portfolio .portfolioBox {
+#Portfolio {
+  color: #050554;
   margin: 0 auto;
   padding: 4rem 2rem 0;
 }
 @media (max-width: 710px) {
-  #Portfolio .portfolioBox {
+  #Portfolio {
     max-width: 100%;
   }
 }
 @media (min-width: 711px) and (max-width: 989px) {
-  #Portfolio .portfolioBox {
+  #Portfolio {
     max-width: 100%;
   }
 }
 @media (min-width: 990px) {
-  #Portfolio .portfolioBox {
+  #Portfolio {
     max-width: 124rem;
   }
 }
-#Portfolio .portfolioBox .worksWrap .useLanguage {
-  text-align: center;
+#Portfolio .portfolioContainer .portfolioGroup .useLanguage {
   color: #050554;
   font-family: serif;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
 }
 @media (max-width: 710px) {
-  #Portfolio .portfolioBox .worksWrap .useLanguage {
+  #Portfolio .portfolioContainer .portfolioGroup .useLanguage {
     font-size: 4rem;
   }
 }
 @media (min-width: 711px) and (max-width: 989px) {
-  #Portfolio .portfolioBox .worksWrap .useLanguage {
+  #Portfolio .portfolioContainer .portfolioGroup .useLanguage {
     font-size: 4rem;
   }
 }
 @media (min-width: 990px) {
-  #Portfolio .portfolioBox .worksWrap .useLanguage {
-    font-size: 5rem;
+  #Portfolio .portfolioContainer .portfolioGroup .useLanguage {
+    font-size: 6rem;
   }
 }
-#Portfolio .portfolioBox .worksWrap .worksTitle {
-  background-color: #3428c1;
-  color: #fff;
-  display: inline-block;
-  font-size: 2.5rem;
-  margin: 0 auto;
-  text-align: center;
+#Portfolio .portfolioContainer .portfolioGroup .useLanguage::after {
+  background-color: #050554;
+  bottom: -0.4rem;
+  content: "";
+  display: block;
+  width: 5.6rem;
+  height: 0.2rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
 }
-#Portfolio .portfolioBox .worksWrap .worksOverview {
+#Portfolio .portfolioContainer .portfolioGroup .portfolioTitle {
   text-align: center;
 }
 @media (max-width: 710px) {
-  #Portfolio .portfolioBox .worksWrap .worksOverview {
-    font-size: 1.6rem;
-  }
-}
-@media (min-width: 711px) and (max-width: 989px) {
-  #Portfolio .portfolioBox .worksWrap .worksOverview {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioTitle {
     font-size: 2rem;
   }
 }
-@media (max-width: 710px) {
-  #Portfolio .portfolioBox .worksWrap .worksOverview {
+@media (min-width: 711px) and (max-width: 989px) {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioTitle {
     font-size: 2.4rem;
   }
 }
+@media (min-width: 990px) {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioTitle {
+    font-size: 3.2rem;
+  }
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioImage {
+  text-align: center;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioImage .reference {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+}
 @media (max-width: 710px) {
-  #Portfolio .portfolioBox .appImg {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioImage .reference {
     width: 100%;
   }
 }
 @media (min-width: 711px) and (max-width: 989px) {
-  #Portfolio .portfolioBox .appImg {
-    width: 45rem;
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioImage .reference {
+    width: 40rem;
   }
 }
 @media (min-width: 990px) {
-  #Portfolio .portfolioBox .appImg {
-    height: auto;
-    width: 50rem;
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioImage .reference {
+    width: 45rem;
   }
 }
-#Portfolio .portfolioBox .worksConts {
-  background-color: #fff;
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioImage .reference .appImg {
+  height: auto;
+  width: 100%;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule {
   display: flex;
 }
 @media (max-width: 710px) {
-  #Portfolio .portfolioBox .worksConts {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule {
     flex-direction: column;
   }
 }
 @media (min-width: 711px) and (max-width: 989px) {
-  #Portfolio .portfolioBox .worksConts {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule {
     flex-direction: row;
   }
 }
 @media (min-width: 990px) {
-  #Portfolio .portfolioBox .worksConts {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule {
     flex-direction: row;
   }
 }
-#Portfolio .portfolioBox .worksConts .worksAnimation,
-#Portfolio .portfolioBox .worksConts .worksDesc {
-  color: #050554;
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioThumbnail {
+  text-align: center;
+  width: 100%;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioThumbnail .video {
+  height: 25rem;
 }
 @media (max-width: 710px) {
-  #Portfolio .portfolioBox .worksConts .worksAnimation,
-  #Portfolio .portfolioBox .worksConts .worksDesc {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioThumbnail .video {
+    width: 100%;
+  }
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioThumbnail .video {
     width: 100%;
   }
 }
 @media (min-width: 990px) {
-  #Portfolio .portfolioBox .worksConts .worksAnimation,
-  #Portfolio .portfolioBox .worksConts .worksDesc {
-    width: 50%;
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioThumbnail .video {
+    width: 70%;
   }
 }
-#Portfolio .portfolioBox .worksConts .film::before {
-  color: #888;
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioAbout {
+  text-align: center;
+  width: 100%;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioDesc {
+  display: inline-block;
+  text-align: center;
+}
+@media (max-width: 710px) {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioDesc {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioDesc {
+    font-size: 2.4rem;
+    line-height: 4rem;
+  }
+}
+@media (min-width: 990px) {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioDesc {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioDescList {
+  text-align: start;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioDetail {
+  font-size: 1.6rem;
+  line-height: 4rem;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioDesc {
+  display: inline-block;
+  text-align: center;
+}
+@media (max-width: 710px) {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioDesc {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioDesc {
+    font-size: 2.4rem;
+    line-height: 4rem;
+  }
+}
+@media (min-width: 990px) {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioDesc {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .film {
+  position: relative;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .film::before, #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .film::after {
+  color: #bbb;
   content: "\f008";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+  position: absolute;
 }
-#Portfolio .portfolioBox .worksConts .link::before {
-  color: #888;
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .film::before {
+  left: -3.6rem;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .film::after {
+  right: -3.6rem;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .link {
+  position: relative;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .link::before, #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .link::after {
+  color: #bbb;
   content: "\f0c1";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+  position: absolute;
 }
-#Portfolio .portfolioBox .worksConts .overview::before {
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .link::before {
+  left: -3.6rem;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .link::after {
+  right: -3.6rem;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .overview {
+  position: relative;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .overview::before, #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .overview::after {
+  color: #bbb;
   content: "\f15c";
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
+  position: absolute;
 }
-#Portfolio .portfolioBox .worksConts .point::before {
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .overview::before {
+  left: -3.6rem;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .overview::after {
+  right: -3.6rem;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .point {
+  position: relative;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .point::before, #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .point::after {
   color: #f2be42;
   content: "\f0eb";
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
+  position: absolute;
 }
-#Portfolio .portfolioBox .worksConts .fa-check-circle {
-  color: green;
-  font-size: 1.6rem;
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .point::before {
+  left: -3.6rem;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .point::after {
+  right: -3.6rem;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .check {
+  position: relative;
+}
+#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .check::before {
+  color: #3428c1;
+  content: "\f058";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  left: -2.4rem;
+  position: absolute;
 }
 
 #Profile {
