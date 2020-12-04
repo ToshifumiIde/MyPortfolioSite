@@ -5,19 +5,21 @@
 //////
 //色//
 //////
-$navy: rgb(5, 5, 84);
-$green:#00B900;
 $blue: #1944a9;
-$lightBlue: #4c6bf9;
 $brightBlue: #3428c1;
-$twitterColor: rgb(29, 161, 242);
-$facebookColor: rgb(59, 89, 152);
-$htmlColor: rgb(238, 76, 45);
 $cssColor: rgb(10, 78, 244);
-$sassColor: rgb(208, 98, 149);
-$jsColor: rgb(248, 216, 54);
-$reactColor: rgb(68, 218, 249);
+$facebookColor: rgb(59, 89, 152);
 $gitHubColor: rgb(17, 15, 15);
+$gitHubColorLight: rgba(17, 15, 15 , 0.5);
+$green:#00B900;
+$htmlColor: rgb(238, 76, 45);
+$jsColor: rgb(248, 216, 54);
+$lightBlue: #4c6bf9;
+$navy: rgb(5, 5, 84);
+$reactColor: rgb(68, 218, 249);
+$sassColor: rgb(208, 98, 149);
+$twitterColor: rgb(29, 161, 242);
+$twitterColorLight: rgba(29, 161, 242, 0.5);
 
 @mixin sp {
   @media (max-width: 710px) {

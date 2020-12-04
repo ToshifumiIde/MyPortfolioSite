@@ -1,20 +1,22 @@
 #Profile {
   background-color: #fcfcfc;
-  padding: 5.6rem 0 9.6rem;
   width: 100%;
-
-  @include tab {
-    padding-top: 5.6rem 0 4rem;
+  @include sp {
+    padding: 5.6rem 0 9.6rem;
   }
-
+  @include tab {
+    padding: 5.6rem 0 8rem;
+  }
   @include pc {
     height: 88rem;
     padding: 6.4rem 0;
   }
-
   .profileContainer {
     margin: 0 auto;
     position: relative;
+    @include sp {
+      padding: 2rem 3rem 0;
+    }
     @include tab {
       display: flex;
       justify-content: space-between;
@@ -22,7 +24,6 @@
       height: 60rem;
     }
     @include pc {
-      // align-items: center;
       display: flex;
       justify-content: space-between;
       height: 56rem;
@@ -30,44 +31,90 @@
       overflow: hidden;
     }
 
+    /////////////
     // myPhoto //
+    /////////////
     .myPhoto {
-      height: 25rem;
-      margin: 2rem auto;
-      width: 25rem;
-      @include tab {
+      margin: 0 auto;
+      @include sp {
         width: 100%;
-        height: 56rem;
+      }
+      @include tab {
+        position: relative;
+        width: 100%;
+        &:before {
+          content: "";
+          display: block;
+          padding-top: 70%;
+        }
       }
       @include pc {
         width: 100%;
-        height: 56rem;
-        // padding: 0 4rem;
-        padding-right: 4rem;
         margin: 0;
       }
+
       .imgBox {
         background-image: url(../img/toshifumiide1.jpg);
-        background-position: top 0 left 60%;
-        background-repeat: no-repeat;
         background-size: cover;
-        border-radius: 50%;
-        height: 100%;
-        width: 100%;
-
+        background-repeat: no-repeat;
+        @include sp {
+          background-position: top 0 left 60%;
+          border-radius: 50%;
+          height: 25rem;
+          margin: 0 auto 2rem;
+          max-width: 25rem;
+        }
         @include tab {
           background-position: top 0 left 70%;
-          background-size: cover;
-          border-radius: 0;
-          overflow: hidden;
-          width: 100%;
+          border-radius: 50%;
+          // height: auto;
+          // overflow: hidden;
+          // width: 100%;
+          // margin: 0 auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
         }
         @include pc {
           background-position: center;
-          background-size: cover;
-          border-radius: 0;
-          height: 100%;
+          height: 56rem;
           width: 100%;
+        }
+      }
+
+      .mySns {
+        @include pc {
+          display: none;
+        }
+        @include tab {
+          height: 12rem;
+        }
+        @include sp {
+          margin-bottom: 4rem;
+        }
+        text-align: center;
+        ul {
+          margin: 0 auto;
+        }
+        .sns {
+          font-size: 2.4rem;
+          line-height: 6rem;
+          text-decoration: none;
+          width: 100%;
+        }
+        .twitter {
+          color: $twitterColor;
+        }
+        .twitter:hover {
+          color: $twitterColorLight;
+        }
+        .github {
+          color: $gitHubColor;
+        }
+        .github:hover {
+          color: $gitHubColorLight;
         }
       }
     }
@@ -77,9 +124,7 @@
     .aboutMe {
       align-items: center;
       overflow: scroll;
-      padding: 0rem 3rem 0rem;
       width: 100%;
-
       @include tab {
         background-color: rgba(5, 5, 84, 0.85);
         height: 56rem;
@@ -91,15 +136,17 @@
       }
 
       .aboutMeTitle {
-        color: $navy;
         font-family: sans-serif;
-        font-size: 3rem;
         font-weight: normal;
         text-align: center;
-        padding: 0 0 1rem;
-
+        @include sp {
+          color: $navy;
+          font-size: 3rem;
+          padding: 0 0 1rem;
+        }
         @include tab {
           color: #eee;
+          font-size: 3rem;
           padding: 1rem 0;
         }
         @include pc {
@@ -117,7 +164,10 @@
       .profileWrap {
         display: flex;
         background-color: rgba(5, 5, 84, 0.85);
-        padding-bottom: 1.6rem;
+        @include sp {
+          border-radius: 0.4rem;
+          padding: 1.6rem 0 4rem;
+        }
         @include tab {
           background-color: rgba(5, 5, 84, 0);
         }
@@ -126,8 +176,10 @@
         }
 
         .icon {
-          padding-top: 2rem;
-          margin-left: 1.5rem;
+          @include sp {
+            margin-left: 1.5rem;
+            padding-top: 2rem;
+          }
           @include tab {
             margin-left: 0;
             padding-top: 0.8rem;
@@ -143,15 +195,28 @@
 
           .profileDesc1,
           .profileDesc2 {
+            .myName {
+              color: #fff;
+              padding-top: 2rem;
+              @include sp {
+                font-size: 2rem;
+              }
+              @include tab {
+                font-size: 1.7rem;
+              }
+              @include pc {
+                font-size: 2.5rem;
+              }
+            }
             p,
             .profileChapter {
               color: #fff;
-              font-size: 1.5rem;
-
+              @include sp {
+                font-size: 1.5rem;
+              }
               @include tab {
                 font-size: 1.3rem;
               }
-
               @include pc {
                 font-size: 1.5rem;
               }
@@ -160,57 +225,76 @@
               padding-top: 1.8rem;
             }
 
-            .myName {
-              color: #fff;
-              font-size: 2rem;
-              padding-top: 2rem;
-              @include tab {
-                font-size: 1.7rem;
-              }
+            ////////////////
+            // myStrengths//
+            ////////////////
+            .myStrengths {
               @include pc {
-                font-size: 2.5rem;
+                margin-bottom: 2rem;
               }
-            }
-            // myStrength//
-            .myStrength {
-              color: #eee;
-              font-size: 1.6rem;
-              line-height: 2rem;
-              @include tab {
-                font-size: 1.3rem;
-              }
-              @include pc {
-                font-size: 1.5rem;
-              }
-              .colon {
+              .myStrength {
+                color: #eee;
+                line-height: 2rem;
                 @include sp {
-                  display: none;
+                  font-size: 1.6rem;
                 }
-
                 @include tab {
-                  display: none;
+                  font-size: 1.3rem;
+                }
+                @include pc {
+                  font-size: 1.5rem;
+                }
+                .colon {
+                  @include sp {
+                    display: none;
+                  }
+                  @include tab {
+                    display: none;
+                  }
                 }
               }
             }
+            /////////
             //mySns//
+            /////////
             .mySns {
-              .fa-twitter {
-                color: $twitterColor;
-                font-size: 3rem;
-                font-family: "Font Awesome 5 Brands";
-                text-decoration: none;
-                &:hover {
-                  color: rgba(29, 161, 242, 0.7);
+              @include sp {
+                display: none;
+              }
+              @include tab {
+                display: none;
+              }
+              @include pc {
+                display: block;
+              }
+              .snsBox {
+                display: flex;
+                justify-content: space-around;
+                .snsRight,
+                .snsLeft {
+                  flex-grow: 1;
+                }
+                .sns {
+                  text-decoration: none;
+                  font-size: 2.4rem;
+                }
+                .twitter {
+                  color: $twitterColor;
+                  &:hover {
+                    color: $twitterColorLight;
+                  }
+                }
+                .github {
+                  color: $gitHubColor;
+                  &:hover {
+                    color: $gitHubColorLight;
+                  }
                 }
               }
               .fab {
                 vertical-align: middle;
               }
-              .fa-github {
-                color: $gitHubColor;
-                font-size: 3rem;
-              }
-            } //muySns
+            } //mySns
           }
         }
       }
@@ -218,11 +302,11 @@
 
     .slideContsL {
       transform: translateX(-100rem);
-      transition: all 0.7s;
+      transition: all 0.4s;
     }
     .slideContsR {
       transform: translateX(100rem);
-      transition: all 0.7s;
+      transition: all 0.4s;
     }
   }
 }

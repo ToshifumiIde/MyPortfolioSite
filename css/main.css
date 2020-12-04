@@ -306,11 +306,6 @@ body.menu-open #menu {
 .toTop .toTopArrow:hover {
   transform: translate(-50%, -50%) scale(1.2);
 }
-@media (min-width: 990px) {
-  .toTop .toTopArrow {
-    display: none;
-  }
-}
 .toTop .toTopArrow .fa-chevron-up {
   left: 50%;
   position: absolute;
@@ -425,7 +420,6 @@ footer .copyRight {
 @media (min-width: 990px) {
   #Contact {
     padding-top: 6.4rem;
-    height: 70rem;
   }
 }
 @media (min-width: 990px) {
@@ -986,13 +980,13 @@ footer .copyRight {
 }
 @media (max-width: 710px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioContent {
-    width: 80%;
-    padding: 4rem 2.4rem;
+    width: 90%;
+    padding: 4rem 2.4rem 2.4rem;
   }
 }
 @media (min-width: 711px) and (max-width: 989px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioContent {
-    width: 80%;
+    width: 90%;
     padding: 4rem;
   }
 }
@@ -1112,7 +1106,7 @@ footer .copyRight {
 }
 @media (max-width: 710px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioAbout {
-    padding: 0 3.2rem 2.4rem;
+    padding-bottom: 2.4rem;
   }
 }
 @media (min-width: 711px) and (max-width: 989px) {
@@ -1127,7 +1121,18 @@ footer .copyRight {
 }
 #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioDescList {
   text-align: start;
-  margin-bottom: 1.6rem;
+  margin: 0 auto 1.6rem;
+  width: 80%;
+}
+@media (max-width: 710px) {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioDescList {
+    padding-left: 3.2rem;
+  }
+}
+@media (min-width: 990px) {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioDescList {
+    padding-left: 3.2rem;
+  }
 }
 @media (max-width: 710px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioDetail {
@@ -1242,18 +1247,36 @@ footer .copyRight {
   content: "\f058";
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
-  left: -2.4rem;
   position: absolute;
+}
+@media (max-width: 710px) {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .check::before {
+    left: -2rem;
+  }
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .check::before {
+    left: -2rem;
+  }
+}
+@media (min-width: 990px) {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .check::before {
+    left: -3rem;
+  }
 }
 
 #Profile {
   background-color: #fcfcfc;
-  padding: 5.6rem 0 9.6rem;
   width: 100%;
+}
+@media (max-width: 710px) {
+  #Profile {
+    padding: 5.6rem 0 9.6rem;
+  }
 }
 @media (min-width: 711px) and (max-width: 989px) {
   #Profile {
-    padding-top: 5.6rem 0 4rem;
+    padding: 5.6rem 0 8rem;
   }
 }
 @media (min-width: 990px) {
@@ -1265,6 +1288,11 @@ footer .copyRight {
 #Profile .profileContainer {
   margin: 0 auto;
   position: relative;
+}
+@media (max-width: 710px) {
+  #Profile .profileContainer {
+    padding: 2rem 3rem 0;
+  }
 }
 @media (min-width: 711px) and (max-width: 989px) {
   #Profile .profileContainer {
@@ -1284,55 +1312,104 @@ footer .copyRight {
   }
 }
 #Profile .profileContainer .myPhoto {
-  height: 25rem;
-  margin: 2rem auto;
-  width: 25rem;
+  margin: 0 auto;
+}
+@media (max-width: 710px) {
+  #Profile .profileContainer .myPhoto {
+    width: 100%;
+  }
 }
 @media (min-width: 711px) and (max-width: 989px) {
   #Profile .profileContainer .myPhoto {
+    position: relative;
     width: 100%;
-    height: 56rem;
+  }
+  #Profile .profileContainer .myPhoto:before {
+    content: "";
+    display: block;
+    padding-top: 70%;
   }
 }
 @media (min-width: 990px) {
   #Profile .profileContainer .myPhoto {
     width: 100%;
-    height: 56rem;
-    padding-right: 4rem;
     margin: 0;
   }
 }
 #Profile .profileContainer .myPhoto .imgBox {
   background-image: url(../img/toshifumiide1.jpg);
-  background-position: top 0 left 60%;
-  background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 50%;
-  height: 100%;
-  width: 100%;
+  background-repeat: no-repeat;
+}
+@media (max-width: 710px) {
+  #Profile .profileContainer .myPhoto .imgBox {
+    background-position: top 0 left 60%;
+    border-radius: 50%;
+    height: 25rem;
+    margin: 0 auto 2rem;
+    max-width: 25rem;
+  }
 }
 @media (min-width: 711px) and (max-width: 989px) {
   #Profile .profileContainer .myPhoto .imgBox {
     background-position: top 0 left 70%;
-    background-size: cover;
-    border-radius: 0;
-    overflow: hidden;
-    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
 }
 @media (min-width: 990px) {
   #Profile .profileContainer .myPhoto .imgBox {
     background-position: center;
-    background-size: cover;
-    border-radius: 0;
-    height: 100%;
+    height: 56rem;
     width: 100%;
   }
+}
+#Profile .profileContainer .myPhoto .mySns {
+  text-align: center;
+}
+@media (min-width: 990px) {
+  #Profile .profileContainer .myPhoto .mySns {
+    display: none;
+  }
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  #Profile .profileContainer .myPhoto .mySns {
+    height: 12rem;
+  }
+}
+@media (max-width: 710px) {
+  #Profile .profileContainer .myPhoto .mySns {
+    margin-bottom: 4rem;
+  }
+}
+#Profile .profileContainer .myPhoto .mySns ul {
+  margin: 0 auto;
+}
+#Profile .profileContainer .myPhoto .mySns .sns {
+  font-size: 2.4rem;
+  line-height: 6rem;
+  text-decoration: none;
+  width: 100%;
+}
+#Profile .profileContainer .myPhoto .mySns .twitter {
+  color: #1da1f2;
+}
+#Profile .profileContainer .myPhoto .mySns .twitter:hover {
+  color: rgba(29, 161, 242, 0.5);
+}
+#Profile .profileContainer .myPhoto .mySns .github {
+  color: #110f0f;
+}
+#Profile .profileContainer .myPhoto .mySns .github:hover {
+  color: rgba(17, 15, 15, 0.5);
 }
 #Profile .profileContainer .aboutMe {
   align-items: center;
   overflow: scroll;
-  padding: 0rem 3rem 0rem;
   width: 100%;
 }
 @media (min-width: 711px) and (max-width: 989px) {
@@ -1349,16 +1426,21 @@ footer .copyRight {
   }
 }
 #Profile .profileContainer .aboutMe .aboutMeTitle {
-  color: #050554;
   font-family: sans-serif;
-  font-size: 3rem;
   font-weight: normal;
   text-align: center;
-  padding: 0 0 1rem;
+}
+@media (max-width: 710px) {
+  #Profile .profileContainer .aboutMe .aboutMeTitle {
+    color: #050554;
+    font-size: 3rem;
+    padding: 0 0 1rem;
+  }
 }
 @media (min-width: 711px) and (max-width: 989px) {
   #Profile .profileContainer .aboutMe .aboutMeTitle {
     color: #eee;
+    font-size: 3rem;
     padding: 1rem 0;
   }
 }
@@ -1375,7 +1457,12 @@ footer .copyRight {
 #Profile .profileContainer .aboutMe .profileWrap {
   display: flex;
   background-color: rgba(5, 5, 84, 0.85);
-  padding-bottom: 1.6rem;
+}
+@media (max-width: 710px) {
+  #Profile .profileContainer .aboutMe .profileWrap {
+    border-radius: 0.4rem;
+    padding: 1.6rem 0 4rem;
+  }
 }
 @media (min-width: 711px) and (max-width: 989px) {
   #Profile .profileContainer .aboutMe .profileWrap {
@@ -1387,9 +1474,11 @@ footer .copyRight {
     background-color: rgba(5, 5, 84, 0);
   }
 }
-#Profile .profileContainer .aboutMe .profileWrap .icon {
-  padding-top: 2rem;
-  margin-left: 1.5rem;
+@media (max-width: 710px) {
+  #Profile .profileContainer .aboutMe .profileWrap .icon {
+    margin-left: 1.5rem;
+    padding-top: 2rem;
+  }
 }
 @media (min-width: 711px) and (max-width: 989px) {
   #Profile .profileContainer .aboutMe .profileWrap .icon {
@@ -1406,12 +1495,42 @@ footer .copyRight {
 #Profile .profileContainer .aboutMe .profileWrap .profileDesc {
   padding: 0 2rem;
 }
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myName,
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myName {
+  color: #fff;
+  padding-top: 2rem;
+}
+@media (max-width: 710px) {
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myName,
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myName {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myName,
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myName {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 990px) {
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myName,
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myName {
+    font-size: 2.5rem;
+  }
+}
 #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 p,
 #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .profileChapter,
 #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 p,
 #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .profileChapter {
   color: #fff;
-  font-size: 1.5rem;
+}
+@media (max-width: 710px) {
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 p,
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .profileChapter,
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 p,
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .profileChapter {
+    font-size: 1.5rem;
+  }
 }
 @media (min-width: 711px) and (max-width: 989px) {
   #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 p,
@@ -1433,81 +1552,108 @@ footer .copyRight {
 #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .profileChapter {
   padding-top: 1.8rem;
 }
-#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myName,
-#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myName {
-  color: #fff;
-  font-size: 2rem;
-  padding-top: 2rem;
-}
-@media (min-width: 711px) and (max-width: 989px) {
-  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myName,
-  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myName {
-    font-size: 1.7rem;
-  }
-}
 @media (min-width: 990px) {
-  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myName,
-  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myName {
-    font-size: 2.5rem;
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myStrengths,
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myStrengths {
+    margin-bottom: 2rem;
   }
 }
-#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myStrength,
-#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myStrength {
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myStrengths .myStrength,
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myStrengths .myStrength {
   color: #eee;
-  font-size: 1.6rem;
   line-height: 2rem;
 }
+@media (max-width: 710px) {
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myStrengths .myStrength,
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myStrengths .myStrength {
+    font-size: 1.6rem;
+  }
+}
 @media (min-width: 711px) and (max-width: 989px) {
-  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myStrength,
-  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myStrength {
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myStrengths .myStrength,
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myStrengths .myStrength {
     font-size: 1.3rem;
   }
 }
 @media (min-width: 990px) {
-  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myStrength,
-  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myStrength {
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myStrengths .myStrength,
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myStrengths .myStrength {
     font-size: 1.5rem;
   }
 }
 @media (max-width: 710px) {
-  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myStrength .colon,
-  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myStrength .colon {
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myStrengths .myStrength .colon,
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myStrengths .myStrength .colon {
     display: none;
   }
 }
 @media (min-width: 711px) and (max-width: 989px) {
-  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myStrength .colon,
-  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myStrength .colon {
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .myStrengths .myStrength .colon,
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .myStrengths .myStrength .colon {
     display: none;
   }
 }
-#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns .fa-twitter,
-#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns .fa-twitter {
-  color: #1da1f2;
-  font-size: 3rem;
-  font-family: "Font Awesome 5 Brands";
-  text-decoration: none;
+@media (max-width: 710px) {
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns,
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns {
+    display: none;
+  }
 }
-#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns .fa-twitter:hover,
-#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns .fa-twitter:hover {
-  color: rgba(29, 161, 242, 0.7);
+@media (min-width: 711px) and (max-width: 989px) {
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns,
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns {
+    display: none;
+  }
+}
+@media (min-width: 990px) {
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns,
+  #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns {
+    display: block;
+  }
+}
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns .snsBox,
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns .snsBox {
+  display: flex;
+  justify-content: space-around;
+}
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns .snsBox .snsRight,
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns .snsBox .snsLeft,
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns .snsBox .snsRight,
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns .snsBox .snsLeft {
+  flex-grow: 1;
+}
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns .snsBox .sns,
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns .snsBox .sns {
+  text-decoration: none;
+  font-size: 2.4rem;
+}
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns .snsBox .twitter,
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns .snsBox .twitter {
+  color: #1da1f2;
+}
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns .snsBox .twitter:hover,
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns .snsBox .twitter:hover {
+  color: rgba(29, 161, 242, 0.5);
+}
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns .snsBox .github,
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns .snsBox .github {
+  color: #110f0f;
+}
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns .snsBox .github:hover,
+#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns .snsBox .github:hover {
+  color: rgba(17, 15, 15, 0.5);
 }
 #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns .fab,
 #Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns .fab {
   vertical-align: middle;
 }
-#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc1 .mySns .fa-github,
-#Profile .profileContainer .aboutMe .profileWrap .profileDesc .profileDesc2 .mySns .fa-github {
-  color: #110f0f;
-  font-size: 3rem;
-}
 #Profile .profileContainer .slideContsL {
   transform: translateX(-100rem);
-  transition: all 0.7s;
+  transition: all 0.4s;
 }
 #Profile .profileContainer .slideContsR {
   transform: translateX(100rem);
-  transition: all 0.7s;
+  transition: all 0.4s;
 }
 
 #Eyecatch {
@@ -1694,11 +1840,20 @@ footer .copyRight {
 
 header {
   background-color: rgba(5, 5, 84, 0.9);
-  height: 5.6rem;
   position: fixed;
   transform: translate(0, 0);
   width: 100%;
   z-index: 1000;
+}
+@media (max-width: 710px) {
+  header {
+    height: 5.6rem;
+  }
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  header {
+    height: 5.6rem;
+  }
 }
 @media (min-width: 990px) {
   header {
@@ -1715,19 +1870,23 @@ header .headerContainer {
 }
 header .headerContainer .headerLogo a {
   color: #fff;
-  font-size: 2rem;
   font-weight: normal;
   height: 100%;
-  line-height: 300%;
   text-decoration: none;
   cursor: pointer;
 }
+@media (max-width: 710px) {
+  header .headerContainer .headerLogo a {
+    font-size: 2rem;
+    line-height: 300%;
+  }
+}
 @media (min-width: 711px) and (max-width: 989px) {
   header .headerContainer .headerLogo a {
-    width: 50%;
     font-size: 2.4rem;
     line-height: 233%;
     padding-right: 1.6rem;
+    width: 50%;
   }
 }
 @media (min-width: 990px) {
@@ -1758,16 +1917,14 @@ header .headerContainer .headerRight {
     width: 55%;
   }
 }
-header .headerContainer .headerRight #ham {
+header .headerContainer .headerRight .ham {
   border: 0.1rem solid #fff;
   border-radius: 0.5rem;
+  cursor: pointer;
   height: 3.2rem;
+  position: relative;
   width: 3.2rem;
   z-index: 1000;
-}
-header .headerContainer .headerRight .ham {
-  cursor: pointer;
-  position: relative;
 }
 @media (min-width: 990px) {
   header .headerContainer .headerRight .ham {
@@ -1793,39 +1950,43 @@ header .headerContainer .headerRight .ham .hamLine3 {
   left: 10%;
   top: 75%;
 }
-header .headerContainer .headerRight .clicked .hamLine1 {
+header .headerContainer .headerRight .ham.clicked .hamLine1 {
   transform: rotate(-45deg);
   top: 45%;
 }
-header .headerContainer .headerRight .clicked .hamLine2 {
+header .headerContainer .headerRight .ham.clicked .hamLine2 {
   width: 0%;
 }
-header .headerContainer .headerRight .clicked .hamLine3 {
+header .headerContainer .headerRight .ham.clicked .hamLine3 {
   transform: rotate(45deg);
   top: 45%;
 }
 header .headerContainer .headerRight .menuWrapper {
   background-color: rgba(5, 5, 84, 0.9);
-  height: 50rem;
   position: fixed;
   padding-top: 3rem;
   right: -300rem;
-  top: 5.6rem;
   transition: 0.5s;
   transition-timing-function: ease;
-  width: 60vw;
   z-index: 1000;
+}
+@media (max-width: 710px) {
+  header .headerContainer .headerRight .menuWrapper {
+    height: 50rem;
+    top: 5.6rem;
+    width: 60vw;
+  }
 }
 @media (min-width: 711px) and (max-width: 989px) {
   header .headerContainer .headerRight .menuWrapper {
-    top: 5.6rem;
     height: 50rem;
+    top: 5.6rem;
     width: 50vw;
   }
 }
 @media (min-width: 990px) {
   header .headerContainer .headerRight .menuWrapper {
-    top: 6.4rem;
+    display: none;
   }
 }
 header .headerContainer .headerRight .menuWrapper .menuList a {
@@ -1845,8 +2006,15 @@ header .headerContainer .headerRight .menuWrapper .menuList a:hover {
 header .headerContainer .headerRight .clicked {
   right: 0px;
 }
-header .headerContainer .headerRight .pcMenu {
-  display: none;
+@media (max-width: 710px) {
+  header .headerContainer .headerRight .pcMenu {
+    display: none;
+  }
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  header .headerContainer .headerRight .pcMenu {
+    display: none;
+  }
 }
 @media (min-width: 990px) {
   header .headerContainer .headerRight .pcMenu {
@@ -1886,6 +2054,33 @@ header .headerContainer .headerRight .pcMenu ul a::after {
 }
 header .headerContainer .headerRight .pcMenu ul a:hover::after {
   transform: scale(1, 1);
+}
+header .hamShadow {
+  display: none;
+}
+header .hamShadow.clicked {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 900;
+}
+@media (max-width: 710px) {
+  header .hamShadow.clicked {
+    display: block;
+    top: 5.6rem;
+  }
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  header .hamShadow.clicked {
+    display: block;
+    top: 5.6rem;
+  }
+}
+@media (min-width: 990px) {
+  header .hamShadow.clicked {
+    display: none;
+  }
 }
 
 .loadingView {

@@ -4,7 +4,6 @@
   $(function () {
     //初期状態ではスクロール不可//
     $("body").css("overflow", "hidden"); 
-
     ////////////////////////////////////////////////
     //ロード完了まで、スクロール処理を実行させない//
     ////////////////////////////////////////////////
@@ -19,19 +18,26 @@
     //////////////////////////////
     //ハンバーガーメニューの動作//
     //////////////////////////////
-    $(".ham").on("click", function () {
+
+    $("#ham").on("click", function () {
       if ($(this).hasClass("clicked")) {
-        //.hamが"clicked"のセレクターを所有していた場合
-        $(this).removeClass("clicked"); //.hamから"clicked"のセレクターを除去する
+        $(this).removeClass("clicked");
       } else {
-        $(this).addClass("clicked"); //.hamになかった場合、"clicked"のセレクターを追加する
+        $(this).addClass("clicked");
       }
-      if ($(".menuWrapper").hasClass("clicked")) {
-        $(".menuWrapper").removeClass("clicked");
+      if ($(".menuWrapper , .hamShadow").hasClass("clicked")) {
+        $(".menuWrapper , .hamShadow").removeClass("clicked");
       } else {
-        $(".menuWrapper").addClass("clicked");
+        $(".menuWrapper , .hamShadow").addClass("clicked");
       }
     });
+
+    ////////////////////////////////
+    //影の部分をクリックしたら外す//
+    ////////////////////////////////
+    $("#hamShadow").on("click" ,function(){
+      $(".ham , .menuWrapper , .hamShadow").removeClass("clicked");
+    })
 
     ////////////////////////////////////
     // aクリック時のスムーススクロール//
@@ -48,33 +54,25 @@
         speed,
         "swing"
       );
-      if ($(".ham").hasClass("clicked")) {
-        $(".ham").removeClass("clicked"); //外す
+      if ($(".ham, .menuWrapper , .hamShadow").hasClass("clicked")) {
+        $(".ham, .menuWrapper , .hamShadow").removeClass("clicked");
       }
-      if ($(".menuWrapper").hasClass("clicked")) {
-        $(".menuWrapper").removeClass("clicked"); //外す
-      }
-      return false; // URLにアンカーリンクを付加させない
+      return false;
     });
 
     ////////////////////////////
     //eyecatchのスライドショー//
     ////////////////////////////
-    //①ページの概念・初期ページを設定
+    {
     let page = 0;
-    //②イメージ数 = 最後のページ数として変数化
     let lastPage = parseInt($("#sliderWrap #slider").length - 1); 
     let Timer;
-    //③最初に全部の画像を一旦非表示
     $("#sliderWrap #slider").css("display", "none");
-    //④初期ページを表示
     $("#sliderWrap #slider").eq(page).css("display", "block");
-    //⑤ページ切換用、自作関数作成
     function changePage() {
       $("#sliderWrap #slider").fadeOut(1500);
       $("#sliderWrap #slider").eq(page).fadeIn(1500);
     }
-    //⑥～秒間隔でイメージ切換の発火設定
     function startTimer() {
       Timer = setInterval(function () {
         if (page === lastPage) {
@@ -90,8 +88,7 @@
       clearInterval(Timer);
     }
     startTimer();
-    /*オプションを足す場合はここへ記載*/
-  });
+    }
 
   //////////////////////
   //スクロールイベント//
@@ -122,7 +119,7 @@
       let scroll = $(window).scrollTop();
       let targetElement = $(this).offset().top;
       let windowHeight = $(window).height();
-      if (scroll > targetElement - windowHeight + 80) {
+      if (scroll > targetElement - windowHeight + 100) {
         $(this).css("transform", "translateX(0)");
       } else {
         $(this).css("transform", "translateX(100rem)");
@@ -132,7 +129,7 @@
       let scroll = $(window).scrollTop();
       let targetElement = $(this).offset().top;
       let windowHeight = $(window).height();
-      if (scroll > targetElement - windowHeight + 80) {
+      if (scroll > targetElement - windowHeight + 100) {
         $(this).css("transform", "translateX(0)");
       } else {
         $(this).css("transform", "translateX(-200rem)");
@@ -154,7 +151,10 @@
       }
     });
   });
+  //////////////////////////
   //スクロールイベント終了//
+  //////////////////////////
+  
 
   ////////////////////////////////////////////////////////
   //パララックス調に背景を設定し、切り替える(iPhone対応)//
@@ -188,5 +188,6 @@
         beforeBg = "bg2";
       }
     }
+  });
   });
 }

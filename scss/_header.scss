@@ -1,14 +1,18 @@
 header {
+  @include sp {
+    height: 5.6rem;
+  }
+  @include tab {
+    height: 5.6rem;
+  }
+  @include pc {
+    height: 6.4rem;
+  }
   background-color: rgba(5, 5, 84, 0.9);
-  height: 5.6rem;
   position: fixed;
   transform: translate(0, 0);
   width: 100%;
   z-index: 1000;
-
-  @include pc {
-    height: 6.4rem;
-  }
 
   .headerContainer {
     display: flex;
@@ -17,21 +21,17 @@ header {
     max-width: 124rem;
     margin: 0 auto;
     padding: 0 2rem;
-
     .headerLogo {
       a {
-        color: #fff;
-        font-size: 2rem;
-        font-weight: normal;
-        height: 100%;
-        line-height: 300%;
-        text-decoration: none;
-        cursor: pointer;
+        @include sp {
+          font-size: 2rem;
+          line-height: 300%;
+        }
         @include tab {
-          width: 50%;
           font-size: 2.4rem;
           line-height: 233%;
           padding-right: 1.6rem;
+          width: 50%;
         }
         @include pc {
           color: #ddd;
@@ -43,6 +43,11 @@ header {
             color: #fff;
           }
         }
+        color: #fff;
+        font-weight: normal;
+        height: 100%;
+        text-decoration: none;
+        cursor: pointer;
       }
     } // headerLogo
 
@@ -60,21 +65,20 @@ header {
         width: 55%;
       }
 
+      ////////////////////////////////
       //ハンバーガーメニューアイコン//
-      #ham {
-        border: 0.1rem solid #fff;
-        border-radius: 0.5rem;
-        height: 3.2rem;
-        width: 3.2rem;
-        z-index: 1000;
-      }
+      ////////////////////////////////
       .ham {
-        cursor: pointer;
-        position: relative;
         @include pc {
           display: none;
         }
-
+        border: 0.1rem solid #fff;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        height: 3.2rem;
+        position: relative;
+        width: 3.2rem;
+        z-index: 1000;
         .hamLine {
           background-color: #fff;
           height: 0.2rem;
@@ -96,46 +100,47 @@ header {
           top: 75%;
           // top: 80%;
         }
+        &.clicked {
+          .hamLine1 {
+            transform: rotate(-45deg);
+            top: 45%;
+          }
+          .hamLine2 {
+            width: 0%;
+          }
+          .hamLine3 {
+            transform: rotate(45deg);
+            top: 45%;
+          }
+        }
       }
 
-      .clicked {
-        .hamLine1 {
-          transform: rotate(-45deg);
-          top: 45%;
-        }
-        .hamLine2 {
-          width: 0%;
-        }
-        .hamLine3 {
-          transform: rotate(45deg);
-          top: 45%;
-        }
-      }
       //ハンバーガーメニューアイコン終了//
 
       //////////////////////////////////
       //ハンバーガーメニュー内のリスト//
       //////////////////////////////////
       .menuWrapper {
-        background-color: rgba(5, 5, 84, 0.9);
-        height: 50rem;
-        position: fixed;
-        padding-top: 3rem;
-        right: -300rem;
-        top: 5.6rem;
-        transition: 0.5s;
-        transition-timing-function: ease;
-        width: 60vw;
-        z-index: 1000;
-        @include tab {
-          top: 5.6rem;
+        @include sp {
           height: 50rem;
+          top: 5.6rem;
+          width: 60vw;
+        }
+        @include tab {
+          height: 50rem;
+          top: 5.6rem;
           width: 50vw;
         }
         @include pc {
-          top: 6.4rem;
+          display: none;
         }
-
+        background-color: rgba(5, 5, 84, 0.9);
+        position: fixed;
+        padding-top: 3rem;
+        right: -300rem;
+        transition: 0.5s;
+        transition-timing-function: ease;
+        z-index: 1000;
         .menuList a {
           border-bottom: 1px solid #bbb;
           color: #ddd;
@@ -154,9 +159,13 @@ header {
       .clicked {
         right: 0px;
       } // ハンバーガーメニュー内のリスト終了
-
       .pcMenu {
-        display: none;
+        @include sp {
+          display: none;
+        }
+        @include tab {
+          display: none;
+        }
         @include pc {
           display: block;
           height: 100%;
@@ -197,4 +206,29 @@ header {
       } //.pcMenu
     }
   } //headerRight
+
+  ////////////////////////////
+  //ハンバーガーメニューの影//
+  ////////////////////////////
+  .hamShadow {
+    display: none;
+    &.clicked {
+      @include sp {
+        display:block;
+        top: 5.6rem;
+      }
+      @include tab {
+        display:block;
+        top: 5.6rem;
+      }
+      @include pc {
+        display: none;
+      }
+      background-color: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      z-index: 900;
+    }
+  }
 }

@@ -15,9 +15,9 @@
     transform: translate(-50%, -50%);
     transition: 0.5s;
     width: 5.6rem;
-    @include pc {
-      display: none;
-    }
+    // @include pc {
+    //   display: none;
+    // }
     .fa-chevron-up {
       left: 50%;
       position: absolute;

@@ -54,11 +54,11 @@
 
       .portfolioContent {
         @include sp {
-          width: 80%;
-          padding: 4rem 2.4rem;
+          width: 90%;
+          padding: 4rem 2.4rem 2.4rem;
         }
         @include tab {
-          width: 80%;
+          width: 90%;
           padding: 4rem;
         }
         @include pc {
@@ -135,7 +135,6 @@
           width: 100%;
 
           .portfolioThumbnail {
-            // background-color: tomato;
             flex-grow: 1;
             position: relative;
             text-align: center;
@@ -156,12 +155,11 @@
           }
 
           .portfolioAbout {
-            // background-color: orange;
             box-sizing: border-box;
             flex-grow: 1;
             text-align: center;
             @include sp {
-              padding: 0 3.2rem 2.4rem;
+              padding-bottom: 2.4rem;
             }
             @include tab {
               padding: 0 3.6rem 4rem;
@@ -173,7 +171,14 @@
 
           .portfolioDescList {
             text-align: start;
-            margin-bottom: 1.6rem;
+            margin: 0 auto 1.6rem;
+            width: 80%;
+            @include sp {
+              padding-left: 3.2rem;
+            }
+            @include pc {
+              padding-left: 3.2rem;
+            }
           }
 
           .portfolioDetail {
@@ -283,11 +288,19 @@
         .check {
           position: relative;
           &::before {
+            @include sp {
+              left: -2rem;
+            }
+            @include tab {
+              left: -2rem;
+            }
+            @include pc {
+              left: -3rem;
+            }
             color: $brightBlue;
             content: "\f058";
             font-family: "Font Awesome 5 Free";
             font-weight: 400;
-            left: -2.4rem;
             position: absolute;
           }
         }

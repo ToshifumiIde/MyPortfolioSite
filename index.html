@@ -30,14 +30,12 @@
   <body>
     <!-- WRAPPER -->
     <div class="wrapper">
-
       <!-- LOADING -->
       <div class="loadingView">
         <div class="loader">
         </div>
       </div>
       <!-- /LOADING -->
-
       <!-- HEADER -->
       <header>
         <div class="headerContainer">
@@ -78,6 +76,7 @@
               </nav>
             </div>
             <!-- /ハンバーガーメニュー内のリスト -->
+            <!--  -->
             <!-- 通常のメニュー -->
             <nav class="pcMenu">
               <ul>
@@ -91,7 +90,11 @@
             </nav>
             <!-- /通常のメニュー -->
           </div><!--HeaderRight-->
+          <!-- / -->
+          
         </div><!--HeaderContainer-->
+        <!-- ハンバーガーメニュー選択時の影 -->
+        <div id="hamShadow" class="hamShadow"></div>
       </header>
       <!-- /HEADER -->
 
@@ -142,8 +145,33 @@
           <h2 class="title">Profile</h2>
           <div class="profileContainer">
             <!-- slideContsL -->
+
             <div class="myPhoto slideContsL">
               <div class="imgBox">
+              </div>
+              <div class="mySns">
+                <ul>
+                  <li>
+                    <a 
+                      class="sns twitter"
+                      href="https://twitter.com/toshiprogram" 
+                      target="_blank"
+                    >
+                      <i class="fab fa-twitter"></i>
+                      Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                      class="sns github" 
+                      href="https://github.com/ToshifumiIde"
+                      target="_blank"
+                    >
+                      <i class="fab fa-github"></i>
+                      GitHub
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
             <!-- /slideContsL -->
@@ -151,7 +179,6 @@
             <div class="aboutMe slideContsR">
               <h3 class="aboutMeTitle">About Me</h3>
               <div class="profileWrap">
-                
                 <!-- icon -->
                 <div class="icon">
                   <span>
@@ -188,12 +215,11 @@
                     <div class="activityBase">
                       <h4 class="profileChapter">【 活動拠点 】</h4>
                       <br>
-                      <p>現在は埼玉県南部に居住。</p>
-                      <p>関東圏を活動領域にしています。</p>
-                      <p></p>
                       <p>
-                        ご要望を叶えるために<br>
-                        頻繁にコミュニケーションをとってお仕事に取り組みます。
+                        現在は埼玉県南部に居住。関東圏を活動領域にしています。
+                      </p>
+                      <p>
+                        ご要望を叶えるために、頻繁にコミュニケーションをとってお仕事に取り組みます。
                       </p>
                     </div>
                     <!--/activityBase-->
@@ -244,31 +270,31 @@
                     <!--/myStrength-->
                     <!--mySns-->
                     <div class="mySns">
-                      <h4 class="profileChapter">
+                      <!-- <h4 class="profileChapter">
                         【 SNS 】
-                      </h4>
-                      <ul>
-                        <li>
+                      </h4> -->
+                      <div class="snsBox">
+                        <div class="snsRight">
                           <a 
-                          class="twitter"
+                          class="sns twitter"
                           href="https://twitter.com/toshiprogram"
                           target="_blank"
                           >
-                            <i class="fab fa-twitter"></i>
-                            Twitter
-                          </a>
-                        </li>
-                        <li>
-                          <a 
-                          class="github"
-                          href="https://github.com/ToshifumiIde"
-                          target="_blank"
-                          >
-                            <i class="fab fa-github"></i>
-                            GitHub
-                          </a>
-                        </li>
-                      </ul>
+                          <i class="fab fa-twitter"></i>
+                          Twitter
+                        </a>
+                      </div>
+                      <div class="snsLeft">
+                        <a 
+                        class="sns github"
+                        href="https://github.com/ToshifumiIde"
+                        target="_blank"
+                        >
+                          <i class="fab fa-github"></i>
+                          GitHub
+                        </a>
+                        </div>
+                      </div>
                     </div>
                   </div><!--profileDesc2-->
                 </div><!-- profileDesc -->
@@ -329,7 +355,7 @@
                             <li class="portfolioDetail check">React-Reduxで状態管理を実装</li>
                             <li class="portfolioDetail check">7つのコンポーネントで状態管理</li>
                             <li class="portfolioDetail check">カレンダーのロジックをmap関数で生成</li>
-                            <li class="portfolioDetail check">DatePickerで、日付指定の予定入力が可能</li>
+                            <li class="portfolioDetail check">DatePickerによる日付指定の予定入力が可能</li>
                           </ul>
                         </div>
                       </div>
@@ -376,13 +402,13 @@
                                           </h5>
                                           <ul class="portfolioDescList">
                                             <li class="portfolioDetail check">果物の英語名をタイピングするゲーム</li>
-                                            <li class="portfolioDetail check">タイプする毎に正誤判定を行い、Score・Missを加算</li>
+                                            <li class="portfolioDetail check">タイプ毎に正誤判定を行い、Score/Missを加算</li>
                                           </ul>
                                           <h5 class="portfolioDesc point">工夫した点</h5>
                                           <ul class="portfolioDescList">
                                             <li class="portfolioDetail check">JavaScript単体で制作したゲーム</li>
-                                            <li class="portfolioDetail check">ゲーム終了時、正答率と率に応じたコメントを返却</li>
-                                            <li class="portfolioDetail check">タイプする果物の名前を、日本語・英語でランダムに設定</li>
+                                            <li class="portfolioDetail check">ゲーム終了時に正答率とコメントを返却</li>
+                                            <li class="portfolioDetail check">タイプする果物の名前を、日本語/英語でランダムに設定</li>
                                           </ul>
                                         </div>
                                       </div>
