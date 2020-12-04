@@ -3,6 +3,7 @@
   color: $navy;
   padding-bottom: 8rem;
   .portfolioContainer {
+    margin: 0 auto;
     @include sp {
       max-width: 100%;
     }
@@ -12,9 +13,13 @@
     @include pc {
       max-width: 124rem;
     }
-    margin: 0 auto;
     .portfolioGroup {
       .useLanguage {
+        color: $navy;
+        font-family: serif;
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
         @include sp {
           font-size: 3.6rem;
           margin-bottom: 2rem;
@@ -28,18 +33,7 @@
           line-height: 8rem;
           margin-bottom: 2rem;
         }
-        color: $navy;
-        font-family: serif;
-        margin: 0 auto;
-        position: relative;
-        text-align: center;
         &::after {
-          @include sp {
-            bottom: -0.8rem;
-          }
-          @include tab {
-            bottom: -0.8rem;
-          }
           background-color: $navy;
           bottom: 0.8rem;
           content: "";
@@ -49,28 +43,35 @@
           transform: translate(-50%, -50%);
           position: absolute;
           width: 7.2rem;
+          @include sp {
+            bottom: -0.8rem;
+          }
+          @include tab {
+            bottom: -0.8rem;
+          }
         }
       }
 
       .portfolioContent {
+        border: 0.1rem solid #cfcfcf;
+        border-radius: 0.8rem;
+        background-color: rgb(251, 251, 251);
+        margin: 0 auto 5.6rem;
         @include sp {
           width: 90%;
-          padding: 4rem 2.4rem 2.4rem;
+          padding: 4rem 1.6rem 2.4rem;
         }
         @include tab {
           width: 90%;
-          padding: 4rem;
+          padding: 4rem 2.4rem;
         }
         @include pc {
           width: 90%;
           padding: 4rem 4rem 5.6rem;
         }
-        border: 0.1rem solid #cfcfcf;
-        border-radius: 0.8rem;
-        background-color: rgb(251, 251, 251);
-        margin: 0 auto 5.6rem;
       }
       .portfolioTitle {
+        text-align: center;
         @include sp {
           font-size: 2rem;
           height: 4rem;
@@ -83,7 +84,6 @@
           font-size: 3.2rem;
           height: 6.4rem;
         }
-        text-align: center;
         &::after {
           background-color: #cfcfcf;
           bottom: -0.8rem;
@@ -98,6 +98,9 @@
           text-align: center;
           margin-bottom: 3.2rem;
           .reference {
+            display: block;
+            height: auto;
+            margin: 0 auto;
             @include sp {
               width: 80%;
             }
@@ -107,9 +110,6 @@
             @include pc {
               width: 40rem;
             }
-            display: block;
-            height: auto;
-            margin: 0 auto;
             .portfolioDesc {
               font-size: 4rem;
             }
@@ -130,27 +130,32 @@
           }
           @include pc {
             flex-direction: row;
+            padding-bottom: 4rem;
           }
           display: flex;
           width: 100%;
 
           .portfolioThumbnail {
-            flex-grow: 1;
             position: relative;
             text-align: center;
-            padding-bottom: 4rem;
+            height: 90%;
+            width: 100%;
+            @include sp {
+              margin-bottom: 3.2rem;
+            }
             .video {
               @include sp {
                 width: 80%;
-                height: 20vh;
+                height: 28rem;
               }
               @include tab {
-                width: 90%;
+                width: 100%;
+                height: 32rem;
               }
               @include pc {
-                width: 80%;
+                height: 40rem;
+                width: 100%;
               }
-              height: 90%;
             }
           }
 
@@ -158,14 +163,15 @@
             box-sizing: border-box;
             flex-grow: 1;
             text-align: center;
+            width: 100%;
             @include sp {
               padding-bottom: 2.4rem;
             }
             @include tab {
-              padding: 0 3.6rem 4rem;
+              // padding: 0 3.6rem 4rem;
             }
             @include pc {
-              padding: 0 6rem 4rem;
+              // padding: 0 6rem 4rem;
             }
           }
 
@@ -175,6 +181,9 @@
             width: 80%;
             @include sp {
               padding-left: 3.2rem;
+            }
+            @include tab {
+              padding-left: 2.4rem;
             }
             @include pc {
               padding-left: 3.2rem;
@@ -189,10 +198,12 @@
             @include tab {
               font-size: 1.2rem;
               line-height: 2rem;
+              margin-bottom: 0.8rem;
             }
             @include pc {
               font-size: 1.6rem;
               line-height: 3.2rem;
+              margin-bottom: 0.8rem;
             }
           }
         }

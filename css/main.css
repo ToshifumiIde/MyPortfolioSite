@@ -981,13 +981,13 @@ footer .copyRight {
 @media (max-width: 710px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioContent {
     width: 90%;
-    padding: 4rem 2.4rem 2.4rem;
+    padding: 4rem 1.6rem 2.4rem;
   }
 }
 @media (min-width: 711px) and (max-width: 989px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioContent {
     width: 90%;
-    padding: 4rem;
+    padding: 4rem 2.4rem;
   }
 }
 @media (min-width: 990px) {
@@ -1072,51 +1072,47 @@ footer .copyRight {
 @media (min-width: 990px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule {
     flex-direction: row;
+    padding-bottom: 4rem;
   }
 }
 #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioThumbnail {
-  flex-grow: 1;
   position: relative;
   text-align: center;
-  padding-bottom: 4rem;
-}
-#Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioThumbnail .video {
   height: 90%;
+  width: 100%;
+}
+@media (max-width: 710px) {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioThumbnail {
+    margin-bottom: 3.2rem;
+  }
 }
 @media (max-width: 710px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioThumbnail .video {
     width: 80%;
-    height: 20vh;
+    height: 28rem;
   }
 }
 @media (min-width: 711px) and (max-width: 989px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioThumbnail .video {
-    width: 90%;
+    width: 100%;
+    height: 32rem;
   }
 }
 @media (min-width: 990px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioThumbnail .video {
-    width: 80%;
+    height: 40rem;
+    width: 100%;
   }
 }
 #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioAbout {
   box-sizing: border-box;
   flex-grow: 1;
   text-align: center;
+  width: 100%;
 }
 @media (max-width: 710px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioAbout {
     padding-bottom: 2.4rem;
-  }
-}
-@media (min-width: 711px) and (max-width: 989px) {
-  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioAbout {
-    padding: 0 3.6rem 4rem;
-  }
-}
-@media (min-width: 990px) {
-  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioAbout {
-    padding: 0 6rem 4rem;
   }
 }
 #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioDescList {
@@ -1127,6 +1123,11 @@ footer .copyRight {
 @media (max-width: 710px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioDescList {
     padding-left: 3.2rem;
+  }
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioDescList {
+    padding-left: 2.4rem;
   }
 }
 @media (min-width: 990px) {
@@ -1144,12 +1145,14 @@ footer .copyRight {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioDetail {
     font-size: 1.2rem;
     line-height: 2rem;
+    margin-bottom: 0.8rem;
   }
 }
 @media (min-width: 990px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioDetail {
     font-size: 1.6rem;
     line-height: 3.2rem;
+    margin-bottom: 0.8rem;
   }
 }
 #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioDesc {
@@ -1322,6 +1325,7 @@ footer .copyRight {
 @media (min-width: 711px) and (max-width: 989px) {
   #Profile .profileContainer .myPhoto {
     width: 100%;
+    height: 56rem;
   }
 }
 @media (min-width: 990px) {
@@ -1348,8 +1352,8 @@ footer .copyRight {
   #Profile .profileContainer .myPhoto .imgBox {
     background-position: top 0 left 70%;
     border-radius: 50%;
-    height: 48rem;
-    width: 100%;
+    height: 36rem;
+    width: 36rem;
     margin: 0 auto;
   }
 }
@@ -1370,7 +1374,8 @@ footer .copyRight {
 }
 @media (min-width: 711px) and (max-width: 989px) {
   #Profile .profileContainer .myPhoto .mySns {
-    height: 12rem;
+    height: 20rem;
+    padding-top: 4rem;
   }
 }
 @media (max-width: 710px) {
@@ -1380,6 +1385,9 @@ footer .copyRight {
 }
 #Profile .profileContainer .myPhoto .mySns ul {
   margin: 0 auto;
+}
+#Profile .profileContainer .myPhoto .mySns li {
+  margin-bottom: 1.6rem;
 }
 #Profile .profileContainer .myPhoto .mySns .sns {
   font-size: 2.4rem;
@@ -1414,7 +1422,7 @@ footer .copyRight {
   #Profile .profileContainer .aboutMe {
     background-color: rgba(5, 5, 84, 0.85);
     height: 56rem;
-    padding: 2rem;
+    padding: 0 2rem;
   }
 }
 #Profile .profileContainer .aboutMe .aboutMeTitle {

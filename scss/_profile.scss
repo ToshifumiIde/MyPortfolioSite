@@ -43,6 +43,7 @@
         // height:48rem;
         // position: relative;
         width: 100%;
+        height: 56rem;
         // &:before {
         //   content: "";
         //   display: block;
@@ -68,9 +69,9 @@
         @include tab {
           background-position: top 0 left 70%;
           border-radius: 50%;
-          height: 48rem;
+          height: 36rem;
           // overflow: hidden;
-          width: 100%;
+          width: 36rem;
           margin: 0 auto;
           // position: absolute;
           // top: 0;
@@ -89,7 +90,8 @@
           display: none;
         }
         @include tab {
-          height: 12rem;
+          height: 20rem;
+          padding-top: 4rem;
         }
         @include sp {
           margin-bottom: 4rem;
@@ -97,6 +99,9 @@
         text-align: center;
         ul {
           margin: 0 auto;
+        }
+        li {
+          margin-bottom: 1.6rem;
         }
         .sns {
           font-size: 2.4rem;
@@ -132,7 +137,7 @@
       @include pc {
         background-color: rgba(5, 5, 84, 0.85);
         height: 56rem;
-        padding: 2rem;
+        padding: 0 2rem;
       }
 
       .aboutMeTitle {
