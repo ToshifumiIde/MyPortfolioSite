@@ -21,7 +21,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 60rem;
+      height: 64rem;
     }
     @include pc {
       display: flex;
@@ -40,13 +40,14 @@
         width: 100%;
       }
       @include tab {
-        position: relative;
+        // height:48rem;
+        // position: relative;
         width: 100%;
-        &:before {
-          content: "";
-          display: block;
-          padding-top: 70%;
-        }
+        // &:before {
+        //   content: "";
+        //   display: block;
+        //   padding-top: 75%;
+        // }
       }
       @include pc {
         width: 100%;
@@ -67,15 +68,15 @@
         @include tab {
           background-position: top 0 left 70%;
           border-radius: 50%;
-          // height: auto;
+          height: 48rem;
           // overflow: hidden;
-          // width: 100%;
-          // margin: 0 auto;
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
+          width: 100%;
+          margin: 0 auto;
+          // position: absolute;
+          // top: 0;
+          // left: 0;
+          // bottom: 0;
+          // right: 0;
         }
         @include pc {
           background-position: center;
@@ -83,7 +84,6 @@
           width: 100%;
         }
       }
-
       .mySns {
         @include pc {
           display: none;
@@ -100,7 +100,7 @@
         }
         .sns {
           font-size: 2.4rem;
-          line-height: 6rem;
+          line-height: 5rem;
           text-decoration: none;
           width: 100%;
         }
@@ -125,8 +125,8 @@
       align-items: center;
       overflow: scroll;
       width: 100%;
+      background-color: rgba(5, 5, 84, 0.85);
       @include tab {
-        background-color: rgba(5, 5, 84, 0.85);
         height: 56rem;
       }
       @include pc {
@@ -140,12 +140,13 @@
         font-weight: normal;
         text-align: center;
         @include sp {
+          background-color: #fcfcfc;
           color: $navy;
           font-size: 3rem;
           padding: 0 0 1rem;
         }
         @include tab {
-          color: #eee;
+          color: #fcfcfc;
           font-size: 3rem;
           padding: 1rem 0;
         }
@@ -160,7 +161,9 @@
         color: #eee;
       }
 
-      // profileWrap
+      ////////////////
+      // profileWrap//
+      ////////////////
       .profileWrap {
         display: flex;
         background-color: rgba(5, 5, 84, 0.85);
@@ -182,7 +185,7 @@
           }
           @include tab {
             margin-left: 0;
-            padding-top: 0.8rem;
+            padding: 0.8rem 0 0 1.2rem;
           }
           @include pc {
             margin-left: 0;
@@ -229,9 +232,9 @@
             // myStrengths//
             ////////////////
             .myStrengths {
-              @include pc {
-                margin-bottom: 2rem;
-              }
+              // @include pc {
+              //   margin-bottom: 2rem;
+              // }
               .myStrength {
                 color: #eee;
                 line-height: 2rem;
