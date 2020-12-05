@@ -65,13 +65,13 @@
     ////////////////////////////
     {
     let page = 0;
-    let lastPage = parseInt($("#sliderWrap #slider").length - 1); 
+    let lastPage = parseInt($("#sliderWrap .slider").length - 1); 
     let Timer;
-    $("#sliderWrap #slider").css("display", "none");
-    $("#sliderWrap #slider").eq(page).css("display", "block");
+    $("#sliderWrap .slider").css("display", "none");
+    $("#sliderWrap .slider").eq(page).css("display", "block");
     function changePage() {
-      $("#sliderWrap #slider").fadeOut(1500);
-      $("#sliderWrap #slider").eq(page).fadeIn(1500);
+      $("#sliderWrap .slider").fadeOut(1500);
+      $("#sliderWrap .slider").eq(page).fadeIn(1500);
     }
     function startTimer() {
       Timer = setInterval(function () {

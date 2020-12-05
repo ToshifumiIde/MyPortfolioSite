@@ -109,7 +109,7 @@
         &::before,
         &::after {
           content: "";
-          background-color: $navy;
+          background-color: $yellow;
           position: absolute;
           top: 50%;
           display: inline-block;
@@ -125,7 +125,7 @@
           }
         }
         &::before {
-          background: linear-gradient(-90deg, $navy, transparent);
+          background: linear-gradient(-90deg, $yellow, transparent);
           @include sp {
             left: -0.6rem;
           }
@@ -137,7 +137,7 @@
           }
         }
         &::after {
-          background: linear-gradient(90deg, $navy, transparent);
+          background: linear-gradient(90deg, $yellow, transparent);
           @include sp {
             right: -0.6rem;
           }
@@ -347,7 +347,7 @@
           position: relative;
           &::before,
           &::after {
-            color: rgb(242, 190, 66);
+            color: $yellow;
             content: "\f0eb";
             font-family: "Font Awesome 5 Free";
             font-weight: 400;

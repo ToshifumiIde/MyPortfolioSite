@@ -11,26 +11,35 @@
       position: relative;
       width: 100%;
 
-      #slider {
+      .slider {
         position: absolute;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: 40% 50%;
         height: 100%;
         width: 100%;
+        @include sp {
+          background-position: 40% 50%;
+        }
+        @include tab {
+          background-position: 40% 50%;
+        }
         @include pc {
-          background-position: 50% 50%;
+          background-position: center;
         }
       }
       .slider1 {
-        background-image: url(../img/slider1_colorado.jpg);
+        background-image: url(../img/slider_star.jpg);
+        background-position: 80% center;
       }
       .slider2 {
-        background-image: url(../img/slider2_sunset.jpg);
-        background-position: 30% 100%;
+        background-image: url(../img/slider_colorado.jpg);
       }
       .slider3 {
-        background-image: url(../img/slider3_ocean.jpg);
+        background-image: url(../img/slider_ocean.jpg);
+      }
+      .slider4 {
+        background-image: url(../img/slider_sunset.jpg);
+        background-position: 30% 100%;
       }
     }
 
@@ -170,7 +179,7 @@
       //mouseIcon
 
       .scroll {
-        color:#fff;
+        color: #fff;
         display: inline-block;
         font-family: serif;
         padding-top: 1rem;

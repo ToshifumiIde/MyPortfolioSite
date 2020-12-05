@@ -1050,7 +1050,7 @@ footer .copyRight {
 }
 #Portfolio .portfolioContainer .portfolioGroup .portfolioTitle::before, #Portfolio .portfolioContainer .portfolioGroup .portfolioTitle::after {
   content: "";
-  background-color: #050554;
+  background-color: #f2be42;
   position: absolute;
   top: 50%;
   display: inline-block;
@@ -1072,7 +1072,7 @@ footer .copyRight {
   }
 }
 #Portfolio .portfolioContainer .portfolioGroup .portfolioTitle::before {
-  background: linear-gradient(-90deg, #050554, transparent);
+  background: linear-gradient(-90deg, #f2be42, transparent);
 }
 @media (max-width: 710px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioTitle::before {
@@ -1090,7 +1090,7 @@ footer .copyRight {
   }
 }
 #Portfolio .portfolioContainer .portfolioGroup .portfolioTitle::after {
-  background: linear-gradient(90deg, #050554, transparent);
+  background: linear-gradient(90deg, #f2be42, transparent);
 }
 @media (max-width: 710px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioTitle::after {
@@ -1899,28 +1899,41 @@ footer .copyRight {
   position: relative;
   width: 100%;
 }
-#Eyecatch .eyecatchWrap #sliderWrap #slider {
+#Eyecatch .eyecatchWrap #sliderWrap .slider {
   position: absolute;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 40% 50%;
   height: 100%;
   width: 100%;
 }
+@media (max-width: 710px) {
+  #Eyecatch .eyecatchWrap #sliderWrap .slider {
+    background-position: 40% 50%;
+  }
+}
+@media (min-width: 711px) and (max-width: 989px) {
+  #Eyecatch .eyecatchWrap #sliderWrap .slider {
+    background-position: 40% 50%;
+  }
+}
 @media (min-width: 990px) {
-  #Eyecatch .eyecatchWrap #sliderWrap #slider {
-    background-position: 50% 50%;
+  #Eyecatch .eyecatchWrap #sliderWrap .slider {
+    background-position: center;
   }
 }
 #Eyecatch .eyecatchWrap #sliderWrap .slider1 {
-  background-image: url(../img/slider1_colorado.jpg);
+  background-image: url(../img/slider_star.jpg);
+  background-position: 80% center;
 }
 #Eyecatch .eyecatchWrap #sliderWrap .slider2 {
-  background-image: url(../img/slider2_sunset.jpg);
-  background-position: 30% 100%;
+  background-image: url(../img/slider_colorado.jpg);
 }
 #Eyecatch .eyecatchWrap #sliderWrap .slider3 {
-  background-image: url(../img/slider3_ocean.jpg);
+  background-image: url(../img/slider_ocean.jpg);
+}
+#Eyecatch .eyecatchWrap #sliderWrap .slider4 {
+  background-image: url(../img/slider_sunset.jpg);
+  background-position: 30% 100%;
 }
 #Eyecatch .eyecatchWrap .eyecatchShadow {
   width: 100%;
@@ -2164,7 +2177,7 @@ header .headerContainer .headerRight .ham .hamLine {
   background-color: #fff;
   height: 0.2rem;
   position: absolute;
-  transition: 0.4s;
+  transition: 0.3s;
   width: 80%;
 }
 header .headerContainer .headerRight .ham .hamLine1 {
