@@ -1,24 +1,13 @@
 #Service {
+  background-color: #fefefe;
+  @include sp{
+    padding: 5.6rem 0;
+  }
   @include tab {
-    height: 90rem;
+    padding: 5.6rem 0;
   }
   @include pc {
-    background: url(../img/moon1.jpg);
-    background-attachment: fixed;
-    background-position: center 38%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 80rem;
-  }
-  .serviceShadow {
-    background-color: rgba(20, 20, 20, 0.4);
-    box-sizing: border-box;
-    height: 100%;
-    padding: 5.6rem 0 4rem;
-    width: 100%;
-    @include pc {
-      padding-top: 6.4rem;
-    }
+    padding: 6.4rem 0 ;
   }
 
   .serviceContents {
@@ -34,7 +23,6 @@
     }
     @include pc {
       justify-content: space-between;
-      padding: 5rem 0;
     }
     .serviceCard {
       background: linear-gradient(-45deg, #bdc3c9, #fff, #b9c3c9);
@@ -56,17 +44,6 @@
         width: 30%;
       }
     }
-    // .appleIcon {
-    //   display: inline;
-    //   position: absolute;
-    //   top: 50%;
-    //   left: 50%;
-    //   transform: translate(-50%, -50%);
-    //   z-index: 1;
-    //   .appleColor {
-    //     color: rgba(220, 220, 220, 0.3);
-    //   }
-    // }
 
     .serviceIcon {
       color: rgba($navy, 0.78);
@@ -97,63 +74,62 @@
 }
 
 //パララックス調をspとtabで実装//
-//JSで切替を管理//
+//JSで切替を管理(以下skillに移行)//
+// @include sp {
+//   #Service:before {
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     content: "";
+//     display: block;
+//     height: 100vh;
+//     left: 0;
+//     position: fixed;
+//     top: 0;
+//     width: 100%;
+//     z-index: -100;
+//   }
+//   #Service.bg0:before {
+//     background: none;
+//   }
+//   #Service.bg1:before {
+//     background: url(../img/moon1.jpg);
+//     background-position: 50% 20%;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//   }
+//   #Service.bg2:before {
+//     background: url(../img/moon2.jpg);
+//     background-position: 35% 20%;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//   }
+// }
+// @include tab {
+//   #Service:before {
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     content: "";
+//     display: block;
+//     height: 100vh;
+//     left: 0;
+//     position: fixed;
+//     top: 0;
+//     width: 100%;
+//     z-index: -100;
+//   }
 
-@include sp {
-  #Service:before {
-    background-repeat: no-repeat;
-    background-size: cover;
-    content: "";
-    display: block;
-    height: 100vh;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: -100;
-  }
-  #Service.bg0:before {
-    background: none;
-  }
-  #Service.bg1:before {
-    background: url(../img/moon1.jpg);
-    background-position: 50% 20%;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  #Service.bg2:before {
-    background: url(../img/moon2.jpg);
-    background-position: 35% 20%;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-@include tab {
-  #Service:before {
-    background-repeat: no-repeat;
-    background-size: cover;
-    content: "";
-    display: block;
-    height: 100vh;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: -100;
-  }
-
-  #service.bg0:before {
-    background: none;
-  }
-  #Service.bg1:before {
-    background: url(../img/moon1.jpg);
-    background-position: 50% 30%;
-    background-size: cover;
-  }
-  #Service.bg2:before {
-    background: url(../img/moon2.jpg);
-    background-position: 40% 0%;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
+//   #service.bg0:before {
+//     background: none;
+//   }
+//   #Service.bg1:before {
+//     background: url(../img/moon1.jpg);
+//     background-position: 50% 30%;
+//     background-size: cover;
+//   }
+//   #Service.bg2:before {
+//     background: url(../img/moon2.jpg);
+//     background-position: 40% 0%;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//   }
+// }

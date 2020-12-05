@@ -1,7 +1,6 @@
 #Portfolio {
   background-color: #efefef;
   color: $navy;
-  // padding-bottom: 8rem;
   @include sp {
     padding: 5.6rem 0 9.6rem;
   }
@@ -68,6 +67,7 @@
         border-radius: 0.8rem;
         background-color: rgb(251, 251, 251);
         margin: 0 auto 5.6rem;
+        text-align: center;
         @include sp {
           width: 90%;
           padding: 4rem 1.6rem 2.4rem;
@@ -82,25 +82,71 @@
         }
       }
       .portfolioTitle {
-        text-align: center;
+        position: relative;
+        display: inline-block;
+        vertical-align: center;
         @include sp {
-          font-size: 2rem;
+          font-size: 1.6rem;
+          line-height: 4rem;
           height: 4rem;
+          padding: 0 6rem;
+          margin-bottom: 1.6rem;
         }
         @include tab {
           font-size: 2.4rem;
+          line-height: 4.8rem;
           height: 4.8rem;
+          padding: 0 12rem;
+          margin-bottom: 2rem;
         }
         @include pc {
           font-size: 3.2rem;
+          line-height: 6.4rem;
           height: 6.4rem;
+          padding: 0 16rem;
+          margin-bottom: 0.8rem;
+        }
+        &::before,
+        &::after {
+          content: "";
+          background-color: $navy;
+          position: absolute;
+          top: 50%;
+          display: inline-block;
+          height: 0.2rem;
+          @include sp {
+            width: 6rem;
+          }
+          @include tab {
+            width: 12rem;
+          }
+          @include pc {
+            width: 16rem;
+          }
+        }
+        &::before {
+          background: linear-gradient(-90deg, $navy, transparent);
+          @include sp {
+            left: -0.6rem;
+          }
+          @include tab {
+            left: -1.2rem;
+          }
+          @include pc {
+            left: -1.6rem;
+          }
         }
         &::after {
-          background-color: $lightGray;
-          bottom: -0.8rem;
-          content: "";
-          height: 0.2rem;
-          width: 40rem;
+          background: linear-gradient(90deg, $navy, transparent);
+          @include sp {
+            right: -0.6rem;
+          }
+          @include tab {
+            right: -1.2rem;
+          }
+          @include pc {
+            right: -1.6rem;
+          }
         }
       }
 
