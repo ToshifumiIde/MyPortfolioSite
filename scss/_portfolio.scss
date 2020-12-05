@@ -1,7 +1,17 @@
 #Portfolio {
   background-color: #efefef;
   color: $navy;
-  padding-bottom: 8rem;
+  // padding-bottom: 8rem;
+  @include sp {
+    padding: 5.6rem 0 9.6rem;
+  }
+  @include tab {
+    padding: 5.6rem 0;
+  }
+  @include pc {
+    padding: 6.4rem 0;
+  }
+
   .portfolioContainer {
     margin: 0 auto;
     @include sp {
@@ -13,6 +23,7 @@
     @include pc {
       max-width: 124rem;
     }
+
     .portfolioGroup {
       .useLanguage {
         color: $navy;
@@ -53,7 +64,7 @@
       }
 
       .portfolioContent {
-        border: 0.1rem solid #cfcfcf;
+        border: 0.1rem solid $lightGray;
         border-radius: 0.8rem;
         background-color: rgb(251, 251, 251);
         margin: 0 auto 5.6rem;
@@ -85,7 +96,7 @@
           height: 6.4rem;
         }
         &::after {
-          background-color: #cfcfcf;
+          background-color: $lightGray;
           bottom: -0.8rem;
           content: "";
           height: 0.2rem;
@@ -173,6 +184,11 @@
             @include pc {
               // padding: 0 6rem 4rem;
             }
+            .portfolioDesc {
+              @include tab {
+                margin-bottom: 0.8rem;
+              }
+            }
           }
 
           .portfolioDescList {
@@ -199,6 +215,9 @@
               font-size: 1.2rem;
               line-height: 2rem;
               margin-bottom: 0.8rem;
+              &:last-child {
+                margin-bottom: 2rem;
+              }
             }
             @include pc {
               font-size: 1.6rem;
@@ -224,7 +243,6 @@
           display: inline-block;
           text-align: center;
         }
-
         ////////////////////////////////
         //擬似要素によるアイコンの追加//
         ////////////////////////////////
@@ -314,6 +332,133 @@
             font-weight: 400;
             position: absolute;
           }
+        }
+      }
+      ////////////
+      //HTML CSS//
+      ////////////
+
+      .portfolioItems {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        @include sp {
+          flex-direction: column;
+        }
+        @include tab {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        @include pc {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .worksCardFlame {
+          border-radius: 0.4rem;
+          color: #fff;
+          height: 25rem;
+          margin: 0 auto;
+          overflow: hidden;
+          &:hover {
+            cursor: pointer;
+          }
+          &.preparation {
+            border: 0.1rem solid $lightGray;
+          }
+          @include sp {
+            width: 80%;
+            margin-bottom: 4rem;
+          }
+          @include tab {
+            width: 45%;
+            margin-bottom: 4rem;
+          }
+          @include pc {
+            width: 30%;
+            margin-bottom: 2.4rem;
+          }
+
+          .worksCard {
+            height: 100%;
+            position: relative;
+            text-align: center;
+            transition: 0.3s;
+            vertical-align: center;
+            width: 100%;
+            &:hover {
+              transform: scale(1.08, 1.08);
+            }
+            i {
+              color: #ddd;
+              @include sp {
+                padding-top: 15%;
+              }
+              @include tab {
+                padding-top: 25%;
+              }
+              @include pc {
+                padding-top: 25%;
+              }
+            }
+          }
+          .worksCard:hover {
+            .worksCardShadow {
+              visibility: visible;
+              transition: 0.3s;
+            }
+            .worksDesc {
+              transition: 0.3s;
+              visibility: visible;
+              opacity: 1;
+            }
+            .worksTitle {
+              top: 40%;
+            }
+            .worksDesc0 {
+              top: 50%;
+            }
+            .worksDesc1 {
+              top: 60%;
+            }
+          }
+          .worksCardShadow {
+            background-color: rgba($navy, 0.6);
+            height: 100%;
+            position: absolute;
+            visibility: hidden;
+            width: 100%;
+          }
+          .worksDesc {
+            left: 50%;
+            opacity: 0;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            visibility: visible;
+            width: 100%;
+          }
+          .worksTitle {
+            color: #ccc;
+            font-size: 1.2rem;
+            top: 45%;
+          }
+          .worksDesc0 {
+            color: #fff;
+            font-size: 1.7rem;
+            top: 55%;
+          }
+          .worksDesc1 {
+            color: #ccc;
+            font-size: 1.2rem;
+            top: 65%;
+          }
+        }
+
+        .worksCardFlame1-2,
+        .worksCardFlame2-2,
+        .worksCardFlame3-2,
+        .worksCardFlame4-2 {
+          display: none;
         }
       }
     }

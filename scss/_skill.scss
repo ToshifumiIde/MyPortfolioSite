@@ -1,19 +1,19 @@
 #Skill {
-  background-color: rgb(240, 240, 240);
-  // background-attachment: fixed;
-  // background-image: url(../img/gustavo-espindola-qpmtL7N6J-E-unsplash.jpg);
-  // background-position: center 82%;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  margin: 0 auto;
+  @include pc{
+    background: url(../img/moon1.jpg);
+    background-attachment: fixed;
+    background-position: center 36%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+  }
 
   .skillShadow {
-    // background-color: rgba(255, 255, 255, 0.1);
-    box-sizing: content-box;
+    background-color: rgba(20, 20, 20, 0.4);
+    box-sizing: border-box;
     height: 100%;
     padding: 5.6rem 0 10rem;
     width: 100%;
-
     @include pc {
       padding-top: 6.4rem;
     }
@@ -26,15 +26,15 @@
     flex-wrap: wrap;
     @include sp {
       flex-direction: column;
+      // flex-direction: row;
+      // justify-content: space-between;
     }
     @include tab {
       flex-direction: row;
       justify-content: space-between;
-      // flex-wrap: wrap;
     }
     @include pc {
       flex-direction: row;
-      // flex-wrap: wrap;
       justify-content: space-between;
       max-width: 124rem;
     }
@@ -45,7 +45,9 @@
       color: $navy;
       height: 23rem;
       margin: 0 auto 3rem;
-      width: 75%;
+      @include sp{
+        width: 60%;
+      }
 
       @include tab {
         width: 45%;
@@ -111,5 +113,67 @@
       transform: translateY(8rem);
       transition: all 0.4s;
     }
+  }
+}
+
+//パララックス調をspとtabで実装//
+//JSで切替を管理//
+
+@include sp {
+  #Skill:before {
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -100;
+  }
+  #Skill.bg0:before {
+    background: none;
+  }
+  #Skill.bg1:before {
+    background: url(../img/moon1.jpg);
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #Skill.bg2:before {
+    background: url(../img/moon2.jpg);
+    background-position: 35% 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@include tab {
+  #Skill:before {
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -100;
+  }
+
+  #Skill.bg0:before {
+    background: none;
+  }
+  #Skill.bg1:before {
+    background: url(../img/moon1.jpg);
+    background-position: 50% 30%;
+    background-size: cover;
+  }
+  #Skill.bg2:before {
+    background: url(../img/moon2.jpg);
+    background-position: 40% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }

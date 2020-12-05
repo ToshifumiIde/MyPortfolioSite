@@ -159,6 +159,7 @@
   ////////////////////////////////////////////////////////
   //パララックス調に背景を設定し、切り替える(iPhone対応)//
   ////////////////////////////////////////////////////////
+
   let beforeBg = "";
   $(window).on("load scroll touchmove", function () {
     let scrollTop = $(window).scrollTop(); // 画像を切り替える位置
@@ -166,28 +167,29 @@
     let changePoint2 = $("#Skill").offset().top;
     if (scrollTop < changePoint1) {
       if (beforeBg !== "bg0") {
-        $("#Service").addClass("bg0");
-        $("#Service").removeClass("bg1");
-        $("#Service").removeClass("bg2");
+        $("#Skill").addClass("bg0");
+        $("#Skill").removeClass("bg1");
+        $("#Skill").removeClass("bg2");
         beforeBg = "bg0";
       }
     } else if (scrollTop < changePoint2) {
       // 同じ背景画像への切替を行わないように判定
       if (beforeBg !== "bg1") {
         // 新しい画像へ切替
-        $("#Service").removeClass("bg0");
-        $("#Service").addClass("bg1");
-        $("#Service").removeClass("bg2");
+        $("#Skill").removeClass("bg0");
+        $("#Skill").addClass("bg1");
+        $("#Skill").removeClass("bg2");
         beforeBg = "bg1";
       }
-    } else {
-      if (beforeBg !== "bg2") {
-        $("#Service").removeClass("bg0");
-        $("#Service").removeClass("bg1");
-        $("#Service").addClass("bg2");
-        beforeBg = "bg2";
-      }
-    }
+    } 
+    // else {
+    //   if (beforeBg !== "bg2") {
+    //     $("#Skill").removeClass("bg0");
+    //     $("#Skill").removeClass("bg1");
+    //     $("#Skill").addClass("bg2");
+    //     beforeBg = "bg2";
+    //   }
+    // }
   });
   });
 }

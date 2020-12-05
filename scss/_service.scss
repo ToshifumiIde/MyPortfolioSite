@@ -96,6 +96,9 @@
   }
 }
 
+//パララックス調をspとtabで実装//
+//JSで切替を管理//
+
 @include sp {
   #Service:before {
     background-repeat: no-repeat;
