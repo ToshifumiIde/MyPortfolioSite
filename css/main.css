@@ -1178,12 +1178,12 @@ footer .copyRight {
 @media (min-width: 711px) and (max-width: 989px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioThumbnail .video {
     width: 100%;
-    height: 32rem;
+    height: 28rem;
   }
 }
 @media (min-width: 990px) {
   #Portfolio .portfolioContainer .portfolioGroup .portfolioUnit .portfolioModule .portfolioThumbnail .video {
-    height: 40rem;
+    height: 32rem;
     width: 100%;
   }
 }
