@@ -151,7 +151,7 @@ body {
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 124rem;
 }
 
 .title {
@@ -417,7 +417,7 @@ footer .copyRight {
 }
 
 #Contact {
-  background-color: #eee;
+  background-color: #efefef;
   padding-top: 5.6rem;
   height: 70rem;
 }
@@ -638,7 +638,7 @@ footer .copyRight {
 }
 
 #Service {
-  background-color: #fefefe;
+  background-color: #fcfcfc;
 }
 @media (max-width: 710px) {
   #Service {

@@ -10,9 +10,9 @@ $brightBlue: #3428c1;
 $cssColor: rgb(10, 78, 244);
 $facebookColor: rgb(59, 89, 152);
 $gitHubColor: rgb(17, 15, 15);
-$gitHubColorLight: rgba(17, 15, 15 , 0.5);
-$green:#00B900;
-$lightGray:#cfcfcf;
+$gitHubColorLight: rgba(17, 15, 15, 0.5);
+$green: #00b900;
+$lightGray: #cfcfcf;
 $htmlColor: rgb(238, 76, 45);
 $jsColor: rgb(248, 216, 54);
 $lightBlue: #4c6bf9;
@@ -56,7 +56,7 @@ body {
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 124rem;
 }
 
 .title {
@@ -83,8 +83,8 @@ body {
 .titleWhite {
   color: white;
 }
-.titleNavy{
-  color:$navy;
+.titleNavy {
+  color: $navy;
 }
 
 #menu {
